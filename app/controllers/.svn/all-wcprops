@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/recipes/!svn/ver/1/app/controllers
+END
+recipes_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/recipes/!svn/ver/1/app/controllers/recipes_controller.rb
+END
+ingredients_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/recipes/!svn/ver/1/app/controllers/ingredients_controller.rb
+END
+steps_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/recipes/!svn/ver/1/app/controllers/steps_controller.rb
+END
+application_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/recipes/!svn/ver/1/app/controllers/application_controller.rb
+END

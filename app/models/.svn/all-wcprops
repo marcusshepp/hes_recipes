@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/recipes/!svn/ver/1/app/models
+END
+.gitkeep
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/recipes/!svn/ver/1/app/models/.gitkeep
+END
+recipe.rb
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/recipes/!svn/ver/1/app/models/recipe.rb
+END
+ingredient.rb
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/recipes/!svn/ver/1/app/models/ingredient.rb
+END
+step.rb
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/recipes/!svn/ver/1/app/models/step.rb
+END

@@ -1,0 +1,25 @@
+<p>
+  Please choose from the list of recipes below.
+</p>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Servings</th>
+    <th>Cook time</th>
+    <th>Prep time</th>
+    <th>Total time</th>
+  </tr>
+
+  <% @recipes.each do |recipe| %>
+    <tr>
+      <td><%= link_to recipe.title, recipe %></td>
+      <td><%= recipe.servings %></td>
+      <td><%= recipe.cook_time %></td>
+      <td><%= recipe.prep_time %></td>
+      <%# FIXME 2012-08-28 - JS - gosh, it sure would be nice if we didn't have to do such complicated math here.  maybe the next line could be a method named total_time on recipe. %>
+      <td><%= recipe.cook_time + recipe.prep_time %></td>
+    </tr>
+  <% end %>
+
+</table>

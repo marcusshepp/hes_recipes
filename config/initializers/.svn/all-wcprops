@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/recipes/!svn/ver/1/config/initializers
+END
+inflections.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/recipes/!svn/ver/1/config/initializers/inflections.rb
+END
+session_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/recipes/!svn/ver/1/config/initializers/session_store.rb
+END
+secret_token.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/recipes/!svn/ver/1/config/initializers/secret_token.rb
+END
+backtrace_silencers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/recipes/!svn/ver/1/config/initializers/backtrace_silencers.rb
+END
+mime_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/recipes/!svn/ver/1/config/initializers/mime_types.rb
+END
+wrap_parameters.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/recipes/!svn/ver/1/config/initializers/wrap_parameters.rb
+END

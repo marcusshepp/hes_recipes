@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 26
+/recipes/!svn/ver/1/config
+END
+routes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/recipes/!svn/ver/1/config/routes.rb
+END
+database.yml
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/recipes/!svn/ver/1/config/database.yml
+END
+application.rb
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/recipes/!svn/ver/1/config/application.rb
+END
+boot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/recipes/!svn/ver/1/config/boot.rb
+END
+environment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/recipes/!svn/ver/1/config/environment.rb
+END

@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/recipes/!svn/ver/1/test/fixtures
+END
+.gitkeep
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/recipes/!svn/ver/1/test/fixtures/.gitkeep
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/recipes/!svn/ver/1/test/functional
+END
+.gitkeep
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/recipes/!svn/ver/1/test/functional/.gitkeep
+END
+recipes_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/recipes/!svn/ver/1/test/functional/recipes_controller_test.rb
+END
