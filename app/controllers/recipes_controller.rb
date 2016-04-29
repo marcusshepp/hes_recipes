@@ -12,11 +12,25 @@ class RecipesController < ApplicationController
 
     # GET /recipes/new
     def new
-        print "hellowrld"
+        # render recipe creation form
     end
 
     # POST /recipes
+    :verify_authenticity_token
     def create
+        print request.POST
+        @r = Recipe.new({
+            :title => params[:title],
+            :prep_time => params[:prep_time],
+            :cook_time => params[:cook_time],
+            :servings => params[:servings],
+            :origin => params[:origin],
+            })
+        if @r.save
+            print @r
+        else
+            print "WTF"
+        end
     end
 
     # GET /recipes/:id/edit
