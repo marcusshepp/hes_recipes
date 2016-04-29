@@ -582,3 +582,383 @@ ActionView::MissingTemplate (Missing template recipes/new, application/new with 
 
 
   Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-29 13:00:19 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 7ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-29 13:00:41 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `total' for #<Recipe:0x007fe813aa9a30>):
+    18:       <td><%= recipe.cook_time %></td>
+    19:       <td><%= recipe.prep_time %></td>
+    20:       <%# FIXME 2012-08-28 - JS - gosh, it sure would be nice if we didn't have to do such complicated math here.  maybe the next line could be a method named total_time on recipe. %>
+    21:       <td><%= recipe.total %></td>
+    22:     </tr>
+    23:   <% end %>
+    24: 
+  app/views/recipes/index.html.erb:21:in `block in _app_views_recipes_index_html_erb___3874690560704966225_70317386874500'
+  app/views/recipes/index.html.erb:14:in `each'
+  app/views/recipes/index.html.erb:14:in `_app_views_recipes_index_html_erb___3874690560704966225_70317386874500'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-29 13:01:40 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (undefined method `total' for #<Recipe:0x007fe8153f90f8>):
+    18:       <td><%= recipe.cook_time %></td>
+    19:       <td><%= recipe.prep_time %></td>
+    20:       <%# FIXME 2012-08-28 - JS - gosh, it sure would be nice if we didn't have to do such complicated math here.  maybe the next line could be a method named total_time on recipe. %>
+    21:       <td><%= recipe.total %></td>
+    22:     </tr>
+    23:   <% end %>
+    24: 
+  app/views/recipes/index.html.erb:21:in `block in _app_views_recipes_index_html_erb___3874690560704966225_70317386874500'
+  app/views/recipes/index.html.erb:14:in `each'
+  app/views/recipes/index.html.erb:14:in `_app_views_recipes_index_html_erb___3874690560704966225_70317386874500'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-29 13:02:46 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `total' for #<Recipe:0x007fe8151a5888>):
+    18:       <td><%= recipe.cook_time %></td>
+    19:       <td><%= recipe.prep_time %></td>
+    20:       <%# FIXME 2012-08-28 - JS - gosh, it sure would be nice if we didn't have to do such complicated math here.  maybe the next line could be a method named total_time on recipe. %>
+    21:       <td><%= recipe.total %></td>
+    22:     </tr>
+    23:   <% end %>
+    24: 
+  app/views/recipes/index.html.erb:21:in `block in _app_views_recipes_index_html_erb___3874690560704966225_70317386874500'
+  app/views/recipes/index.html.erb:14:in `each'
+  app/views/recipes/index.html.erb:14:in `_app_views_recipes_index_html_erb___3874690560704966225_70317386874500'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-29 13:09:14 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `total' for #<Recipe:0x007fe8145b0c58>):
+    17:       <td><%= recipe.servings %></td>
+    18:       <td><%= recipe.cook_time %></td>
+    19:       <td><%= recipe.prep_time %></td>
+    20:       <td><%= recipe.total %></td>
+    21:     </tr>
+    22:   <% end %>
+    23: 
+  app/views/recipes/index.html.erb:20:in `block in _app_views_recipes_index_html_erb___3874690560704966225_70317375345100'
+  app/views/recipes/index.html.erb:14:in `each'
+  app/views/recipes/index.html.erb:14:in `_app_views_recipes_index_html_erb___3874690560704966225_70317375345100'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-29 13:09:28 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (undefined method `total' for #<Recipe:0x007fe815b6e8b0>):
+    17:       <td><%= recipe.servings %></td>
+    18:       <td><%= recipe.cook_time %></td>
+    19:       <td><%= recipe.prep_time %></td>
+    20:       <td><%= recipe.total %></td>
+    21:     </tr>
+    22:   <% end %>
+    23: 
+  app/views/recipes/index.html.erb:20:in `block in _app_views_recipes_index_html_erb___3874690560704966225_70317375345100'
+  app/views/recipes/index.html.erb:14:in `each'
+  app/views/recipes/index.html.erb:14:in `_app_views_recipes_index_html_erb___3874690560704966225_70317375345100'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-29 13:11:49 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `total' for #<Recipe:0x007fe81519c850>):
+    16:             <td><%= recipe.servings %></td>
+    17:             <td><%= recipe.cook_time %></td>
+    18:             <td><%= recipe.prep_time %></td>
+    19:             <td><%= recipe.total %></td>
+    20:         </tr>
+    21:     <% end %>
+    22:     <% @foo.each do |f| %>
+  app/views/recipes/index.html.erb:19:in `block in _app_views_recipes_index_html_erb___3874690560704966225_70317381787780'
+  app/views/recipes/index.html.erb:13:in `each'
+  app/views/recipes/index.html.erb:13:in `_app_views_recipes_index_html_erb___3874690560704966225_70317381787780'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-29 13:11:54 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `total' for #<Recipe:0x007fe8145ab460>):
+    16:             <td><%= recipe.servings %></td>
+    17:             <td><%= recipe.cook_time %></td>
+    18:             <td><%= recipe.prep_time %></td>
+    19:             <!-- <td><%= recipe.total %></td> -->
+    20:         </tr>
+    21:     <% end %>
+    22:     <% @foo.each do |f| %>
+  app/views/recipes/index.html.erb:19:in `block in _app_views_recipes_index_html_erb___3874690560704966225_70317375309440'
+  app/views/recipes/index.html.erb:13:in `each'
+  app/views/recipes/index.html.erb:13:in `_app_views_recipes_index_html_erb___3874690560704966225_70317375309440'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-29 13:11:58 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-29 13:12:34 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `total' for #<Recipe:0x007fe815b8b438>):
+    16:             <td><%= recipe.servings %></td>
+    17:             <td><%= recipe.cook_time %></td>
+    18:             <td><%= recipe.prep_time %></td>
+    19:             <td><%= recipe.total %></td>
+    20:         </tr>
+    21:     <% end %>
+    22: </table>
+  app/views/recipes/index.html.erb:19:in `block in _app_views_recipes_index_html_erb___3874690560704966225_70317386778380'
+  app/views/recipes/index.html.erb:13:in `each'
+  app/views/recipes/index.html.erb:13:in `_app_views_recipes_index_html_erb___3874690560704966225_70317386778380'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-29 13:12:40 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-29 13:12:45 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `total' for #<Recipe:0x007fe815962d00>):
+    16:             <td><%= recipe.servings %></td>
+    17:             <td><%= recipe.cook_time %></td>
+    18:             <td><%= recipe.prep_time %></td>
+    19:             <td><%= recipe.total %></td>
+    20:         </tr>
+    21:     <% end %>
+    22: </table>
+  app/views/recipes/index.html.erb:19:in `block in _app_views_recipes_index_html_erb___3874690560704966225_70317385699660'
+  app/views/recipes/index.html.erb:13:in `each'
+  app/views/recipes/index.html.erb:13:in `_app_views_recipes_index_html_erb___3874690560704966225_70317385699660'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-29 13:14:30 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `total' for #<Recipe:0x007fe8145322e0>):
+    16:             <td><%= recipe.servings %></td>
+    17:             <td><%= recipe.cook_time %></td>
+    18:             <td><%= recipe.prep_time %></td>
+    19:             <td><%= recipe.total %></td>
+    20:         </tr>
+    21:     <% end %>
+    22: </table>
+  app/views/recipes/index.html.erb:19:in `block in _app_views_recipes_index_html_erb___3874690560704966225_70317385699660'
+  app/views/recipes/index.html.erb:13:in `each'
+  app/views/recipes/index.html.erb:13:in `_app_views_recipes_index_html_erb___3874690560704966225_70317385699660'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-29 13:14:31 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `total' for #<Recipe:0x007fe813aad4f0>):
+    16:             <td><%= recipe.servings %></td>
+    17:             <td><%= recipe.cook_time %></td>
+    18:             <td><%= recipe.prep_time %></td>
+    19:             <td><%= recipe.total %></td>
+    20:         </tr>
+    21:     <% end %>
+    22: </table>
+  app/views/recipes/index.html.erb:19:in `block in _app_views_recipes_index_html_erb___3874690560704966225_70317385699660'
+  app/views/recipes/index.html.erb:13:in `each'
+  app/views/recipes/index.html.erb:13:in `_app_views_recipes_index_html_erb___3874690560704966225_70317385699660'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-29 13:14:32 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (undefined method `total' for #<Recipe:0x007fe815369890>):
+    16:             <td><%= recipe.servings %></td>
+    17:             <td><%= recipe.cook_time %></td>
+    18:             <td><%= recipe.prep_time %></td>
+    19:             <td><%= recipe.total %></td>
+    20:         </tr>
+    21:     <% end %>
+    22: </table>
+  app/views/recipes/index.html.erb:19:in `block in _app_views_recipes_index_html_erb___3874690560704966225_70317385699660'
+  app/views/recipes/index.html.erb:13:in `each'
+  app/views/recipes/index.html.erb:13:in `_app_views_recipes_index_html_erb___3874690560704966225_70317385699660'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-29 13:14:38 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (19.2ms)
+Completed 500 Internal Server Error in 29ms
+
+ActionView::Template::Error (undefined method `total' for #<Recipe:0x007ffd42a2a7c8>):
+    16:             <td><%= recipe.servings %></td>
+    17:             <td><%= recipe.cook_time %></td>
+    18:             <td><%= recipe.prep_time %></td>
+    19:             <td><%= recipe.total %></td>
+    20:         </tr>
+    21:     <% end %>
+    22: </table>
+  app/views/recipes/index.html.erb:19:in `block in _app_views_recipes_index_html_erb___1488006510746535819_70362884919920'
+  app/views/recipes/index.html.erb:13:in `each'
+  app/views/recipes/index.html.erb:13:in `_app_views_recipes_index_html_erb___1488006510746535819_70362884919920'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateRecipes (20120828204105)
+Migrating to CreateIngredients (20120828204425)
+Migrating to CreateSteps (20120828204546)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("ingredients")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("recipes")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("steps")
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-29 13:15:12 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (14.1ms)
+Completed 500 Internal Server Error in 22ms
+
+ActionView::Template::Error (undefined method `total' for #<Recipe:0x007fd342536728>):
+    16:             <td><%= recipe.servings %></td>
+    17:             <td><%= recipe.cook_time %></td>
+    18:             <td><%= recipe.prep_time %></td>
+    19:             <td><%= recipe.total %></td>
+    20:         </tr>
+    21:     <% end %>
+    22: </table>
+  app/views/recipes/index.html.erb:19:in `block in _app_views_recipes_index_html_erb__1187425849501434201_70272658985520'
+  app/views/recipes/index.html.erb:13:in `each'
+  app/views/recipes/index.html.erb:13:in `_app_views_recipes_index_html_erb__1187425849501434201_70272658985520'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-29 13:17:47 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 8ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-29 13:18:30 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 8ms (Views: 2.8ms | ActiveRecord: 0.1ms)
