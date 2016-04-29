@@ -1,0 +1,8 @@
+<%= form_for @recipe, :url =>{:action => "update", :id =>@recipe} do |r| %>
+    <p>Title: <%= r.text_field 'title' %></p>
+    <p>Prep Time: <%= r.number_field  'prep_time' %></p>
+    <p>Cook Time: <%= r.number_field  'cook_time' %></p>
+    <p>Servings: <%= r.number_field  'servings' %></p>
+    <p>Servings: <%= r.text_field  'origin' %></p>
+    <%= r.submit "Save changes" %>
+<% end %>

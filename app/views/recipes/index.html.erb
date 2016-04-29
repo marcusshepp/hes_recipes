@@ -2,24 +2,23 @@
 Please choose from the list of recipes below.
 </p>
 
-<table>
-    <tr>
-        <th>Title</th>
-        <th>Servings</th>
-        <th>Cook time</th>
-        <th>Prep time</th>
-        <th>Total time</th>
-    </tr>
+<div class="recipe_list_container">
+    <div>
+        <div>Title</div>
+        <div>Servings</div>
+        <div>Cook time</div>
+        <div>Prep time</div>
+        <div>Total time</div>
+    </div>
     <% @recipes.each do |recipe| %>
-        <tr>
-            <td><%= link_to recipe.title, recipe %></td>
-            <td><%= recipe.servings %></td>
-            <td><%= recipe.cook_time %></td>
-            <td><%= recipe.prep_time %></td>
-            <td><%= recipe.total %></td>
-        </tr>
+        <div>
+            <div><%= link_to recipe.title, recipe %></div>
+            <div><%= recipe.servings %></div>
+            <div><%= recipe.cook_time %></div>
+            <div><%= recipe.prep_time %></div>
+            <div><%= recipe.total %></div>
+            <a href="http://127.0.0.1:3000/recipes/<%= recipe.id %>/edit">Edit</a>
+            <button onclick="delete_recipe('<%= recipe.id %>')">Delete</button>
+        </div>
     <% end %>
-</table>
-<% @foo.each do |f| %>
-    <p><%= f %></p>
-<% end %>
+</div>

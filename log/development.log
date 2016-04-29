@@ -2613,3 +2613,3125 @@ Processing by RecipesController#show as HTML
   [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 1
   Rendered recipes/show.html.erb within layouts/application (8.5ms)
 Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:09:29 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-29 14:09:29 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:09:30 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-29 14:09:30 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:09:31 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 14:10:01 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 1[0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 1
+  Rendered recipes/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:10:02 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:10:51 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms
+
+ActionView::MissingTemplate (Missing template recipes/edit, application/edit with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder]}. Searched in:
+  * "/Users/sheph2mj/projects/health_wellness_challenge/HESRecipes/app/views"
+):
+  actionpack (3.2.2) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.2) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.2) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.2) lib/action_view/renderer/template_renderer.rb:29:in `determine_template'
+  actionpack (3.2.2) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.2) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.2) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:109:in `_render_template'
+  actionpack (3.2.2) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.2) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.2) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.2) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (3.2.2) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.2) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.2) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:414:in `_run__3781174703294555203__process_action__3353915569054697627__callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.2) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.2) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+  activerecord (3.2.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.2) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.2) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.2) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.2) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:67:in `call'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:30:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:594:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.2) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `_run__2967363160154882833__call__352987019704213736__callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.3ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:11:11 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered recipes/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:12:07 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  Rendered recipes/edit.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:12:26 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1[0m
+  Rendered recipes/edit.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:12:45 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  Rendered recipes/edit.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:13:09 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1[0m
+  Rendered recipes/edit.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:13:42 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  Rendered recipes/edit.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:14:21 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1[0m
+  Rendered recipes/edit.html.erb within layouts/application (758.1ms)
+Completed 500 Internal Server Error in 760ms
+
+ActionView::Template::Error (undefined local variable or method `receipe' for #<#<Class:0x007fd342715fa8>:0x007fd3424b7a40>):
+    16:         <div class="recipe_form_field">
+    17:             <label for="servings" class="recipe_form_label">Servings:</label>
+    18:             <input type="number" step="1" name="servings" \
+    19:                 class="recipe_form_int_input" value="<%= receipe.servings %>">
+    20:         </div>
+    21:         <div class="recipe_form_field">
+    22:             <label for="origin" class="recipe_form_label">Origin:</label>
+  app/views/recipes/edit.html.erb:19:in `_app_views_recipes_edit_html_erb__1882901619406520943_70272663532800'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.8ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:14:36 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  Rendered recipes/edit.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:15:18 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1[0m
+  Rendered recipes/edit.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:16:00 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  Rendered recipes/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:16:01 -0400
+
+AbstractController::ActionNotFound (The action 'index' could not be found for RecipesController):
+  actionpack (3.2.2) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.2) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.2) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.2) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:67:in `call'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:30:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:594:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.2) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `_run__2967363160154882833__call__352987019704213736__callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.3ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:16:19 -0400
+
+AbstractController::ActionNotFound (The action 'index' could not be found for RecipesController):
+  actionpack (3.2.2) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.2) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.2) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.2) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:67:in `call'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:30:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:594:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.2) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `_run__2967363160154882833__call__352987019704213736__callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.4ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:16:43 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+Completed 500 Internal Server Error in 5ms
+
+ActionView::MissingTemplate (Missing template recipes/index, application/index with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder]}. Searched in:
+  * "/Users/sheph2mj/projects/health_wellness_challenge/HESRecipes/app/views"
+):
+  actionpack (3.2.2) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.2) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.2) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.2) lib/action_view/renderer/template_renderer.rb:29:in `determine_template'
+  actionpack (3.2.2) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.2) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.2) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:109:in `_render_template'
+  actionpack (3.2.2) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.2) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.2) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.2) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (3.2.2) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.2) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.2) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:414:in `_run__3781174703294555203__process_action__2447634821581294005__callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.2) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.2) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+  activerecord (3.2.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.2) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.2) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.2) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.2) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:67:in `call'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:30:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:594:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.2) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `_run__2967363160154882833__call__352987019704213736__callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:16:54 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:17:54 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+ERROR: compiling _app_views_recipes_index_html_erb__1187425849501434201_70272658838200 RAISED /Users/sheph2mj/projects/health_wellness_challenge/HESRecipes/app/views/recipes/index.html.erb:20: syntax error, unexpected '>'
+/Users/sheph2mj/projects/health_wellness_challenge/HESRecipes/app/views/recipes/index.html.erb:23: unknown regexp options - tabl
+unmatched close parenthesis: /tr>
+');     end 
+@output_buffer.safe_concat('</
+/Users/sheph2mj/projects/health_wellness_challenge/HESRecipes/app/views/recipes/index.html.erb:25: unterminated regexp meets end of file
+/Users/sheph2mj/projects/health_wellness_challenge/HESRecipes/app/views/recipes/index.html.erb:25: syntax error, unexpected end-of-input, expecting ')'
+Function body:           def _app_views_recipes_index_html_erb__1187425849501434201_70272658838200(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "recipes/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<p>
+Please choose from the list of recipes below.
+</p>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Servings</th>
+        <th>Cook time</th>
+        <th>Prep time</th>
+        <th>Total time</th>
+    </tr>
+');     @recipes.each do |recipe| 
+@output_buffer.safe_concat('        <tr>
+            <td>');@output_buffer.append= ( link_to recipe.title, recipe );@output_buffer.safe_concat('</td>
+            <td>');@output_buffer.append= ( recipe.servings );@output_buffer.safe_concat('</td>
+            <td>');@output_buffer.append= ( recipe.cook_time );@output_buffer.safe_concat('</td>
+            <td>');@output_buffer.append= ( recipe.prep_time );@output_buffer.safe_concat('</td>
+            <td>');@output_buffer.append= ( recipe.total );@output_buffer.safe_concat('</td>
+            ');@output_buffer.append= ( link_to "Edit", "http://127.0.0.1:3000/recipes/<% recipe.id );@output_buffer.safe_concat('/edit"%>
+        </tr>
+');     end 
+@output_buffer.safe_concat('</table>
+'); @foo.each do |f| 
+@output_buffer.safe_concat('    <p>');@output_buffer.append= ( f );@output_buffer.safe_concat('</p>
+'); end ;@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/template.rb:285:in `module_eval'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/template.rb:285:in `compile'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/template.rb:233:in `compile!'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/template.rb:142:in `block in render'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/notifications.rb:125:in `instrument'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/template.rb:141:in `render'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:42:in `block (2 levels) in render_template'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/notifications.rb:123:in `block in instrument'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/notifications.rb:123:in `instrument'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:41:in `block in render_template'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:49:in `render_with_layout'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:40:in `render_template'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:13:in `render'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/renderer/renderer.rb:17:in `render'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:109:in `_render_template'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:88:in `render'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/rendering.rb:16:in `render'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/Library/Ruby/Gems/2.0.0/gems/activerecord-3.2.2/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/abstract_controller/base.rb:167:in `process_action'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:414:in `_run__3781174703294555203__process_action__2447634821581294005__callbacks'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/notifications.rb:123:in `block in instrument'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/notifications.rb:123:in `instrument'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+/Library/Ruby/Gems/2.0.0/gems/activerecord-3.2.2/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/abstract_controller/base.rb:121:in `process'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:45:in `process'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal.rb:203:in `dispatch'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal.rb:246:in `block in action'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:67:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:30:in `call'
+/Library/Ruby/Gems/2.0.0/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/Library/Ruby/Gems/2.0.0/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/Library/Ruby/Gems/2.0.0/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:594:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Library/Ruby/Gems/2.0.0/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+/Library/Ruby/Gems/2.0.0/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/Library/Ruby/Gems/2.0.0/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+/Library/Ruby/Gems/2.0.0/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+/Library/Ruby/Gems/2.0.0/gems/activerecord-3.2.2/lib/active_record/query_cache.rb:64:in `call'
+/Library/Ruby/Gems/2.0.0/gems/activerecord-3.2.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:405:in `_run__2967363160154882833__call__352987019704213736__callbacks'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/Library/Ruby/Gems/2.0.0/gems/railties-3.2.2/lib/rails/rack/logger.rb:26:in `call_app'
+/Library/Ruby/Gems/2.0.0/gems/railties-3.2.2/lib/rails/rack/logger.rb:16:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/Library/Ruby/Gems/2.0.0/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+/Library/Ruby/Gems/2.0.0/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Library/Ruby/Gems/2.0.0/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/static.rb:61:in `call'
+/Library/Ruby/Gems/2.0.0/gems/railties-3.2.2/lib/rails/engine.rb:479:in `call'
+/Library/Ruby/Gems/2.0.0/gems/railties-3.2.2/lib/rails/application.rb:220:in `call'
+/Library/Ruby/Gems/2.0.0/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+/Library/Ruby/Gems/2.0.0/gems/railties-3.2.2/lib/rails/rack/log_tailer.rb:14:in `call'
+/Library/Ruby/Gems/2.0.0/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered recipes/index.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (/Users/sheph2mj/projects/health_wellness_challenge/HESRecipes/app/views/recipes/index.html.erb:20: syntax error, unexpected '>'
+/Users/sheph2mj/projects/health_wellness_challenge/HESRecipes/app/views/recipes/index.html.erb:23: unknown regexp options - tabl
+unmatched close parenthesis: /tr>
+');     end 
+@output_buffer.safe_concat('</
+/Users/sheph2mj/projects/health_wellness_challenge/HESRecipes/app/views/recipes/index.html.erb:25: unterminated regexp meets end of file
+/Users/sheph2mj/projects/health_wellness_challenge/HESRecipes/app/views/recipes/index.html.erb:25: syntax error, unexpected end-of-input, expecting ')'):
+    17:             <td><%= recipe.cook_time %></td>
+    18:             <td><%= recipe.prep_time %></td>
+    19:             <td><%= recipe.total %></td>
+    20:             <%= link_to "Edit", "http://127.0.0.1:3000/recipes/<% recipe.id %>/edit"%>
+    21:         </tr>
+    22:     <% end %>
+    23: </table>
+  actionpack (3.2.2) lib/action_view/template.rb:285:in `module_eval'
+  actionpack (3.2.2) lib/action_view/template.rb:285:in `compile'
+  actionpack (3.2.2) lib/action_view/template.rb:233:in `compile!'
+  actionpack (3.2.2) lib/action_view/template.rb:142:in `block in render'
+  activesupport (3.2.2) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.2) lib/action_view/template.rb:141:in `render'
+  actionpack (3.2.2) lib/action_view/renderer/template_renderer.rb:42:in `block (2 levels) in render_template'
+  actionpack (3.2.2) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.2) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.2) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.2) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.2) lib/action_view/renderer/template_renderer.rb:41:in `block in render_template'
+  actionpack (3.2.2) lib/action_view/renderer/template_renderer.rb:49:in `render_with_layout'
+  actionpack (3.2.2) lib/action_view/renderer/template_renderer.rb:40:in `render_template'
+  actionpack (3.2.2) lib/action_view/renderer/template_renderer.rb:13:in `render'
+  actionpack (3.2.2) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.2) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:109:in `_render_template'
+  actionpack (3.2.2) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.2) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.2) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.2) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (3.2.2) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.2) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.2) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:414:in `_run__3781174703294555203__process_action__2447634821581294005__callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.2) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.2) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+  activerecord (3.2.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.2) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.2) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.2) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.2) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:67:in `call'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:30:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:594:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.2) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `_run__2967363160154882833__call__352987019704213736__callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.9ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:21:06 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:21:46 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:22:07 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:22:25 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/2/edit" for 127.0.0.1 at 2016-04-29 14:22:29 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 2
+  Rendered recipes/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:22:31 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:22:32 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  Rendered recipes/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:22:34 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:22:55 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 10ms (Views: 4.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:23:10 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 8ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 14:23:13 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 1[0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 1
+  Rendered recipes/show.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:23:21 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/2" for 127.0.0.1 at 2016-04-29 14:23:22 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 2
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 2[0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 2
+  Rendered recipes/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:23:24 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:23:25 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  Rendered recipes/edit.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-29 14:23:26 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:23:27 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:23:28 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:26:05 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:26:08 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  Rendered recipes/edit.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2016-04-29 14:26:12 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"title"=>"Grilled Hamburgers", "prep_time"=>"14", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems", "recipe_id"=>"1"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("cook_time", "origin", "prep_time", "servings", "title") VALUES (?, ?, ?, ?, ?)  [["cook_time", 10], ["origin", "Health Enhancement Systems"], ["prep_time", 14], ["servings", 4], ["title", "Grilled Hamburgers"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  Rendered recipes/create.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:29:49 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 8ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 14:29:51 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1[0m
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 1
+  [1m[36mStep Load (0.1ms)[0m  [1mSELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 1[0m
+  Rendered recipes/show.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-29 14:29:52 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:29:52 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:29:53 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1[0m
+  Rendered recipes/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2016-04-29 14:29:57 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"title"=>"Grilled Hamburgers foo", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems", "recipe_id"=>"1"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "recipes" ("cook_time", "origin", "prep_time", "servings", "title") VALUES (?, ?, ?, ?, ?)[0m  [["cook_time", 10], ["origin", "Health Enhancement Systems"], ["prep_time", 15], ["servings", 4], ["title", "Grilled Hamburgers foo"]]
+  [1m[35m (0.4ms)[0m  commit transaction
+  Rendered recipes/create.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:29:58 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:30:16 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 8ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:30:19 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1[0m
+  Rendered recipes/edit.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2016-04-29 14:30:22 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"title"=>"Grilled Hamburgers pop", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems", "recipe_id"=>"1"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "recipes" ("cook_time", "origin", "prep_time", "servings", "title") VALUES (?, ?, ?, ?, ?)[0m  [["cook_time", 10], ["origin", "Health Enhancement Systems"], ["prep_time", 15], ["servings", 4], ["title", "Grilled Hamburgers pop"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  Rendered recipes/create.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:30:23 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 14:30:40 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 1[0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 1
+  Rendered recipes/show.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 32ms (Views: 26.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:30:42 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/2/edit" for 127.0.0.1 at 2016-04-29 14:30:44 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 2
+  Rendered recipes/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2016-04-29 14:30:48 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"title"=>"qweeeee foo", "prep_time"=>"11", "cook_time"=>"11", "servings"=>"3", "origin"=>"qweeee", "recipe_id"=>"2"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("cook_time", "origin", "prep_time", "servings", "title") VALUES (?, ?, ?, ?, ?)  [["cook_time", 11], ["origin", "qweeee"], ["prep_time", 11], ["servings", 3], ["title", "qweeeee foo"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  Rendered recipes/create.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 1.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:30:49 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:32:18 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 8ms (Views: 3.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:32:20 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  Rendered recipes/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2016-04-29 14:32:23 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"title"=>"d", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems", "recipe_id"=>"1"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("cook_time", "origin", "prep_time", "servings", "title") VALUES (?, ?, ?, ?, ?)  [["cook_time", 10], ["origin", "Health Enhancement Systems"], ["prep_time", 15], ["servings", 4], ["title", "d"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  Rendered recipes/create.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:32:24 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:33:04 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 23ms (Views: 18.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/7/edit" for 127.0.0.1 at 2016-04-29 14:33:08 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 7
+  Rendered recipes/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2016-04-29 14:33:12 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"title"=>"q", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems", "recipe_id"=>"7"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("cook_time", "origin", "prep_time", "servings", "title") VALUES (?, ?, ?, ?, ?)  [["cook_time", 10], ["origin", "Health Enhancement Systems"], ["prep_time", 15], ["servings", 4], ["title", "q"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  Rendered recipes/create.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:33:13 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:33:22 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1[0m
+  Rendered recipes/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2016-04-29 14:33:25 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"title"=>"Grilled Hamburgers h", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems", "recipe_id"=>"1"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("cook_time", "origin", "prep_time", "servings", "title") VALUES (?, ?, ?, ?, ?)[0m  [["cook_time", 10], ["origin", "Health Enhancement Systems"], ["prep_time", 15], ["servings", 4], ["title", "Grilled Hamburgers h"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  Rendered recipes/create.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:33:26 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:34:21 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 14:34:23 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1[0m
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 1
+  [1m[36mStep Load (0.1ms)[0m  [1mSELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 1[0m
+  Rendered recipes/show.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:34:24 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:34:26 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1[0m
+  Rendered recipes/edit.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2016-04-29 14:34:30 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"title"=>"Grilled Hamburgers iadbc", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems", "recipe_id"=>"1"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "recipes" ("cook_time", "origin", "prep_time", "servings", "title") VALUES (?, ?, ?, ?, ?)[0m  [["cook_time", 10], ["origin", "Health Enhancement Systems"], ["prep_time", 15], ["servings", 4], ["title", "Grilled Hamburgers iadbc"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  Rendered recipes/create.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 1.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:34:31 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:36:47 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 9ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:36:49 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1[0m
+  Rendered recipes/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2016-04-29 14:36:52 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"title"=>"Grilled Hamburgers ko", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems", "recipe_id"=>"1"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "recipes" ("cook_time", "origin", "prep_time", "servings", "title") VALUES (?, ?, ?, ?, ?)[0m  [["cook_time", 10], ["origin", "Health Enhancement Systems"], ["prep_time", 15], ["servings", 4], ["title", "Grilled Hamburgers ko"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  Rendered recipes/create.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:36:53 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:38:41 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 9ms (Views: 4.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:38:42 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1[0m
+  Rendered recipes/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2016-04-29 14:38:47 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"title"=>"Grilled Hamburgers foop", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems", "recipe_id"=>"1"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "recipes" ("cook_time", "origin", "prep_time", "servings", "title") VALUES (?, ?, ?, ?, ?)[0m  [["cook_time", 10], ["origin", "Health Enhancement Systems"], ["prep_time", 15], ["servings", 4], ["title", "Grilled Hamburgers foop"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  Rendered recipes/create.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 1.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:38:48 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:39:02 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 9ms (Views: 4.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:39:03 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1[0m
+  Rendered recipes/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2016-04-29 14:39:08 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"title"=>"Grilled Hamburgers good", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems", "recipe_id"=>"1"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "recipes" ("cook_time", "origin", "prep_time", "servings", "title") VALUES (?, ?, ?, ?, ?)[0m  [["cook_time", 10], ["origin", "Health Enhancement Systems"], ["prep_time", 15], ["servings", 4], ["title", "Grilled Hamburgers good"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  Rendered recipes/create.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:39:08 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:43:25 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/13/delete" for 127.0.0.1 at 2016-04-29 14:43:27 -0400
+
+ActionController::RoutingError (No route matches [GET] "/recipes/13/delete"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:43:47 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/13/destroy" for 127.0.0.1 at 2016-04-29 14:43:49 -0400
+
+ActionController::RoutingError (No route matches [GET] "/recipes/13/destroy"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:45:25 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/13/destroy" for 127.0.0.1 at 2016-04-29 14:45:29 -0400
+
+ActionController::RoutingError (No route matches [GET] "/recipes/13/destroy"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:45:46 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/13/" for 127.0.0.1 at 2016-04-29 14:45:47 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 13
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 13[0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 13
+  Rendered recipes/show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:46:03 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/13/" for 127.0.0.1 at 2016-04-29 14:46:10 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 13
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 13[0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 13
+  Rendered recipes/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:47:19 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:47:20 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  Rendered recipes/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes?title=Grilled+Hamburgers+gggggg&prep_time=15&cook_time=10&servings=4&origin=Health+Enhancement+Systems&recipe_id=1" for 127.0.0.1 at 2016-04-29 14:47:24 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"title"=>"Grilled Hamburgers gggggg", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems", "recipe_id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes?title=Grilled+Hamburgers+gggggg&prep_time=15&cook_time=10&servings=4&origin=Health+Enhancement+Systems&recipe_id=1" for 127.0.0.1 at 2016-04-29 14:47:40 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"title"=>"Grilled Hamburgers gggggg", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems", "recipe_id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes?title=Grilled+Hamburgers+gggggg&prep_time=15&cook_time=10&servings=4&origin=Health+Enhancement+Systems&recipe_id=1" for 127.0.0.1 at 2016-04-29 14:47:42 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"title"=>"Grilled Hamburgers gggggg", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems", "recipe_id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/" for 127.0.0.1 at 2016-04-29 14:47:50 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 1[0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 1
+  Rendered recipes/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:47:53 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:47:55 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 19ms (Views: 3.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:47:57 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1[0m
+  Rendered recipes/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes?title=Grilled+Hamburgers+vvvv&prep_time=15&cook_time=10&servings=4&origin=Health+Enhancement+Systems&recipe_id=1" for 127.0.0.1 at 2016-04-29 14:48:00 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"title"=>"Grilled Hamburgers vvvv", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems", "recipe_id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes?title=Grilled+Hamburgers+vvvv&prep_time=15&cook_time=10&servings=4&origin=Health+Enhancement+Systems&recipe_id=1" for 127.0.0.1 at 2016-04-29 14:48:37 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"title"=>"Grilled Hamburgers vvvv", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems", "recipe_id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:48:40 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  Rendered recipes/edit.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes1/edit?title=Grilled+Hamburgers+pepe&prep_time=15&cook_time=10&servings=4&origin=Health+Enhancement+Systems&recipe_id=1" for 127.0.0.1 at 2016-04-29 14:48:47 -0400
+
+ActionController::RoutingError (No route matches [GET] "/recipes1/edit"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:48:56 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1[0m
+  Rendered recipes/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/edit?title=Grilled+Hamburgers+pee&prep_time=15&cook_time=10&servings=4&origin=Health+Enhancement+Systems&recipe_id=1" for 127.0.0.1 at 2016-04-29 14:48:59 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"title"=>"Grilled Hamburgers pee", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems", "recipe_id"=>"1", "id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  Rendered recipes/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:49:04 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:49:08 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  Rendered recipes/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:49:20 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1[0m
+  Rendered recipes/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:49:23 -0400
+
+ActionController::RoutingError (No route matches [POST] "/recipes/1/edit"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2016-04-29 14:50:23 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  Rendered recipes/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/edit?title=Grilled+Hamburgers+pee&prep_time=15&cook_time=10&servings=4&origin=Health+Enhancement+Systems&recipe_id=1" for 127.0.0.1 at 2016-04-29 14:50:27 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"title"=>"Grilled Hamburgers pee", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems", "recipe_id"=>"1", "id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1[0m
+  Rendered recipes/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 14:50:32 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/3/" for 127.0.0.1 at 2016-04-29 17:10:02 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRecipe Load (0.7ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 3[0m
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 3
+  [1m[36mStep Load (0.1ms)[0m  [1mSELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 3[0m
+  Rendered recipes/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 20ms (Views: 9.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:10:06 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:15:58 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:16:07 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 17:16:08 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1[0m
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 1
+  [1m[36mStep Load (0.1ms)[0m  [1mSELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 1[0m
+  Rendered recipes/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:16:10 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:16:27 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 39ms (Views: 4.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:16:40 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 17:16:42 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1[0m
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 1
+  [1m[36mStep Load (0.1ms)[0m  [1mSELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 1[0m
+  Rendered recipes/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 17:16:51 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 1[0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 1
+  Rendered recipes/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:18:00 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 17:18:01 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 1[0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 1
+  Rendered recipes/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:22:10 -0400
+
+SyntaxError (/Users/sheph2mj/projects/health_wellness_challenge/HESRecipes/app/controllers/recipes_controller.rb:58: syntax error, unexpected end-of-input, expecting keyword_end):
+  activesupport (3.2.2) lib/active_support/dependencies.rb:469:in `load'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:469:in `block in load_file'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:639:in `new_constants_in'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:468:in `load_file'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:353:in `require_or_load'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.2) lib/active_support/inflector/methods.rb:229:in `block in constantize'
+  activesupport (3.2.2) lib/active_support/inflector/methods.rb:228:in `each'
+  activesupport (3.2.2) lib/active_support/inflector/methods.rb:228:in `constantize'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:554:in `get'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:63:in `controller_reference'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:48:in `controller'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:26:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:594:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.2) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `_run__2967363160154882833__call__352987019704213736__callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.4ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:22:25 -0400
+
+SyntaxError (/Users/sheph2mj/projects/health_wellness_challenge/HESRecipes/app/controllers/recipes_controller.rb:10: syntax error, unexpected keyword_do, expecting keyword_then or ';' or '\n'):
+  activesupport (3.2.2) lib/active_support/dependencies.rb:469:in `load'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:469:in `block in load_file'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:639:in `new_constants_in'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:468:in `load_file'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:353:in `require_or_load'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.2) lib/active_support/inflector/methods.rb:229:in `block in constantize'
+  activesupport (3.2.2) lib/active_support/inflector/methods.rb:228:in `each'
+  activesupport (3.2.2) lib/active_support/inflector/methods.rb:228:in `constantize'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:554:in `get'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:63:in `controller_reference'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:48:in `controller'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:26:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:594:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.2) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `_run__2967363160154882833__call__352987019704213736__callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:22:36 -0400
+
+SyntaxError (/Users/sheph2mj/projects/health_wellness_challenge/HESRecipes/app/controllers/recipes_controller.rb:59: syntax error, unexpected end-of-input, expecting keyword_end):
+  activesupport (3.2.2) lib/active_support/dependencies.rb:469:in `load'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:469:in `block in load_file'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:639:in `new_constants_in'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:468:in `load_file'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:353:in `require_or_load'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.2) lib/active_support/inflector/methods.rb:229:in `block in constantize'
+  activesupport (3.2.2) lib/active_support/inflector/methods.rb:228:in `each'
+  activesupport (3.2.2) lib/active_support/inflector/methods.rb:228:in `constantize'
+  activesupport (3.2.2) lib/active_support/dependencies.rb:554:in `get'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:63:in `controller_reference'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:48:in `controller'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:26:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:594:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.2) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `_run__2967363160154882833__call__352987019704213736__callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.9ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:22:50 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 11ms (Views: 5.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1/?delete" for 127.0.0.1 at 2016-04-29 17:22:53 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"delete"=>nil, "id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "recipes" WHERE "recipes"."id" = ?  [["id", 1]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 1
+  [1m[36mStep Load (0.1ms)[0m  [1mSELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 1[0m
+  Rendered recipes/show.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 20ms (Views: 14.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:22:58 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:23:07 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/13/?delete" for 127.0.0.1 at 2016-04-29 17:23:09 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"delete"=>nil, "id"=>"13"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 13
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "recipes" WHERE "recipes"."id" = ?  [["id", 13]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 13
+  [1m[36mStep Load (0.1ms)[0m  [1mSELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 13[0m
+  Rendered recipes/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 7ms (Views: 2.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:23:10 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:25:35 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/2/?delete" for 127.0.0.1 at 2016-04-29 17:25:37 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"delete"=>nil, "id"=>"2"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 2
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  DELETE FROM "recipes" WHERE "recipes"."id" = ?  [["id", 2]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 2
+  [1m[36mStep Load (0.1ms)[0m  [1mSELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 2[0m
+  Rendered recipes/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 9ms (Views: 3.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/recipes/" for 127.0.0.1 at 2016-04-29 17:25:37 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/recipes/6/?delete" for 127.0.0.1 at 2016-04-29 17:25:39 -0400
+
+ActionController::RoutingError (No route matches [GET] "/recipes/recipes/6"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/recipes/" for 127.0.0.1 at 2016-04-29 17:25:56 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/4/?delete" for 127.0.0.1 at 2016-04-29 17:25:57 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"delete"=>nil, "id"=>"4"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 4
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "recipes" WHERE "recipes"."id" = ?  [["id", 4]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 4
+  [1m[36mStep Load (0.1ms)[0m  [1mSELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 4[0m
+  Rendered recipes/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/recipes/recipes/" for 127.0.0.1 at 2016-04-29 17:25:57 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"recipes"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 0
+  Rendered recipes/show.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="recipe_detail_container">
+    2:     <div><%= @recipe.title %></div>
+    3:     <div><%= @recipe.servings %></div>
+    4:     <div><%= @recipe.cook_time %></div>
+    5:     <div><%= @recipe.prep_time %></div>
+  app/views/recipes/show.html.erb:2:in `_app_views_recipes_show_html_erb___2559008481322972427_70272653462160'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.2ms)
+
+
+Started GET "/recipes/" for 127.0.0.1 at 2016-04-29 17:26:07 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/recipes/12/?delete" for 127.0.0.1 at 2016-04-29 17:26:10 -0400
+
+ActionController::RoutingError (No route matches [GET] "/recipes/recipes/12"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/recipes/" for 127.0.0.1 at 2016-04-29 17:26:11 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/recipes/12/?delete" for 127.0.0.1 at 2016-04-29 17:26:12 -0400
+
+ActionController::RoutingError (No route matches [GET] "/recipes/recipes/12"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/recipes/" for 127.0.0.1 at 2016-04-29 17:26:16 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/" for 127.0.0.1 at 2016-04-29 17:26:37 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/recipes/12/?delete" for 127.0.0.1 at 2016-04-29 17:26:40 -0400
+
+ActionController::RoutingError (No route matches [GET] "/recipes/recipes/12"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/recipes/" for 127.0.0.1 at 2016-04-29 17:27:01 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/12/?delete" for 127.0.0.1 at 2016-04-29 17:27:03 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"delete"=>nil, "id"=>"12"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 12
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "recipes" WHERE "recipes"."id" = ?  [["id", 12]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 12
+  [1m[36mStep Load (0.1ms)[0m  [1mSELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 12[0m
+  Rendered recipes/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/recipes/recipes/" for 127.0.0.1 at 2016-04-29 17:27:03 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"recipes"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 0
+  Rendered recipes/show.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="recipe_detail_container">
+    2:     <div><%= @recipe.title %></div>
+    3:     <div><%= @recipe.servings %></div>
+    4:     <div><%= @recipe.cook_time %></div>
+    5:     <div><%= @recipe.prep_time %></div>
+  app/views/recipes/show.html.erb:2:in `_app_views_recipes_show_html_erb___2559008481322972427_70272653462160'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.6ms)
+
+
+Started GET "/recipes/" for 127.0.0.1 at 2016-04-29 17:27:12 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/3/?delete" for 127.0.0.1 at 2016-04-29 17:27:15 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"delete"=>nil, "id"=>"3"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 3
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "recipes" WHERE "recipes"."id" = ?  [["id", 3]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 3
+  [1m[36mStep Load (0.1ms)[0m  [1mSELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 3[0m
+  Rendered recipes/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/recipes/recipes/" for 127.0.0.1 at 2016-04-29 17:27:15 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"recipes"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 0
+  Rendered recipes/show.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="recipe_detail_container">
+    2:     <div><%= @recipe.title %></div>
+    3:     <div><%= @recipe.servings %></div>
+    4:     <div><%= @recipe.cook_time %></div>
+    5:     <div><%= @recipe.prep_time %></div>
+  app/views/recipes/show.html.erb:2:in `_app_views_recipes_show_html_erb___2559008481322972427_70272653462160'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.5ms)
+
+
+Started GET "/recipes/" for 127.0.0.1 at 2016-04-29 17:27:17 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/" for 127.0.0.1 at 2016-04-29 17:27:34 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/11/?delete" for 127.0.0.1 at 2016-04-29 17:27:35 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"delete"=>nil, "id"=>"11"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 11[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "recipes" WHERE "recipes"."id" = ?[0m  [["id", 11]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 11[0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 11
+  Rendered recipes/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/recipes/" for 127.0.0.1 at 2016-04-29 17:27:35 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/5/?delete" for 127.0.0.1 at 2016-04-29 17:27:37 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"delete"=>nil, "id"=>"5"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 5
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "recipes" WHERE "recipes"."id" = ?  [["id", 5]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 5
+  [1m[36mStep Load (0.1ms)[0m  [1mSELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 5[0m
+  Rendered recipes/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/recipes/" for 127.0.0.1 at 2016-04-29 17:27:37 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/6/?delete" for 127.0.0.1 at 2016-04-29 17:27:39 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"delete"=>nil, "id"=>"6"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 6[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "recipes" WHERE "recipes"."id" = ?[0m  [["id", 6]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 6[0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 6
+  Rendered recipes/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 8ms (Views: 3.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/recipes/" for 127.0.0.1 at 2016-04-29 17:27:39 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/7/?delete" for 127.0.0.1 at 2016-04-29 17:27:39 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"delete"=>nil, "id"=>"7"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 7
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "recipes" WHERE "recipes"."id" = ?  [["id", 7]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 7
+  [1m[36mStep Load (0.1ms)[0m  [1mSELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 7[0m
+  Rendered recipes/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/recipes/" for 127.0.0.1 at 2016-04-29 17:27:39 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/" for 127.0.0.1 at 2016-04-29 17:27:41 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/" for 127.0.0.1 at 2016-04-29 17:27:59 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/8" for 127.0.0.1 at 2016-04-29 17:28:02 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 8[0m
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 8
+  [1m[36mStep Load (0.1ms)[0m  [1mSELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 8[0m
+  Rendered recipes/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:28:04 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/8" for 127.0.0.1 at 2016-04-29 17:28:05 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 8[0m
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 8
+  [1m[36mStep Load (0.1ms)[0m  [1mSELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 8[0m
+  Rendered recipes/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:28:06 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-29 17:28:08 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2016-04-29 17:28:20 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"title"=>"foo bar pop", "prep_time"=>"5", "cook_time"=>"55", "servings"=>"77", "origin"=>"QWERRR"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("cook_time", "origin", "prep_time", "servings", "title") VALUES (?, ?, ?, ?, ?)  [["cook_time", 55], ["origin", "QWERRR"], ["prep_time", 5], ["servings", 77], ["title", "foo bar pop"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  Rendered recipes/create.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 1.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:28:21 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/8/?delete" for 127.0.0.1 at 2016-04-29 17:28:29 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"delete"=>nil, "id"=>"8"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 8[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "recipes" WHERE "recipes"."id" = ?[0m  [["id", 8]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 8[0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 8
+  Rendered recipes/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/recipes/" for 127.0.0.1 at 2016-04-29 17:28:29 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/recipes/14/edit" for 127.0.0.1 at 2016-04-29 17:28:32 -0400
+
+ActionController::RoutingError (No route matches [GET] "/recipes/recipes/14/edit"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/recipes/" for 127.0.0.1 at 2016-04-29 17:29:00 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/9/edit" for 127.0.0.1 at 2016-04-29 17:29:01 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 9[0m
+  Rendered recipes/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/9/edit?title=Grilled+Hamburgers&prep_time=15&cook_time=10&servings=4&origin=Health+Enhancement+Systems&recipe_id=9" for 127.0.0.1 at 2016-04-29 17:29:07 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"title"=>"Grilled Hamburgers", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems", "recipe_id"=>"9", "id"=>"9"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 9
+  Rendered recipes/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:29:10 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:31:24 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 7ms (Views: 2.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/9/edit" for 127.0.0.1 at 2016-04-29 17:31:28 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 9[0m
+  Rendered recipes/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/9/?title=Grilled+Hamburgers+foobar&prep_time=15&cook_time=10&servings=4&origin=Health+Enhancement+Systems&recipe_id=9" for 127.0.0.1 at 2016-04-29 17:31:32 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"title"=>"Grilled Hamburgers foobar", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems", "recipe_id"=>"9", "id"=>"9"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 9
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 9[0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 9
+  Rendered recipes/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:31:34 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-29 17:50:29 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2016-04-29 17:50:43 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"recipe"=>{"title"=>"foopopololbar", "prep_time"=>"345", "cook_time"=>"345", "servings"=>"96", "origin"=>"qwepoi"}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "recipes" ("cook_time", "origin", "prep_time", "servings", "title") VALUES (?, ?, ?, ?, ?)[0m  [["cook_time", 345], ["origin", "qwepoi"], ["prep_time", 345], ["servings", 96], ["title", "foopopololbar"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  Rendered recipes/create.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 11ms (Views: 1.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:50:45 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/15/edit" for 127.0.0.1 at 2016-04-29 17:50:54 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 15
+  Rendered recipes/edit.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:50:55 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:54:59 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-29 17:55:01 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2016-04-29 17:55:06 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"recipe"=>{"title"=>"qweqwe", "prep_time"=>"3", "cook_time"=>"3", "servings"=>"3", "origin"=>"qweqwe"}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("cook_time", "origin", "prep_time", "servings", "title") VALUES (?, ?, ?, ?, ?)  [["cook_time", 3], ["origin", "qweqwe"], ["prep_time", 3], ["servings", 3], ["title", "qweqwe"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  Rendered recipes/create.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 9ms (Views: 2.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:55:07 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-29 17:55:21 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2016-04-29 17:55:28 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"recipe"=>{"title"=>"gggggg", "prep_time"=>"6", "cook_time"=>"6", "servings"=>"6", "origin"=>"gggggg"}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("cook_time", "origin", "prep_time", "servings", "title") VALUES (?, ?, ?, ?, ?)  [["cook_time", 6], ["origin", "gggggg"], ["prep_time", 6], ["servings", 6], ["title", "gggggg"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  Rendered recipes/create.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 11ms (Views: 1.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:55:29 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:57:43 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:58:43 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/9/edit" for 127.0.0.1 at 2016-04-29 17:58:45 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 9[0m
+  Rendered recipes/edit.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/9/?recipe%5Btitle%5D=Grilled+Hamburgers+poop&recipe%5Bprep_time%5D=15&recipe%5Bcook_time%5D=10&recipe%5Bservings%5D=4&recipe%5Borigin%5D=Health+Enhancement+Systems&recipe%5Bid%5D=9" for 127.0.0.1 at 2016-04-29 17:58:54 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"recipe"=>{"title"=>"Grilled Hamburgers poop", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems", "id"=>"9"}, "id"=>"9"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 9
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 9[0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 9
+  Rendered recipes/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 17:58:56 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/9/edit" for 127.0.0.1 at 2016-04-29 18:03:53 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 9
+  Rendered recipes/edit.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 18:08:24 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/9/edit" for 127.0.0.1 at 2016-04-29 18:08:26 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 9
+  Rendered recipes/edit.html.erb within layouts/application (834.2ms)
+Completed 500 Internal Server Error in 836ms
+
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007fd3421337c0>:0x007fd341c19c80>):
+    4:     <p>Cook Time: <%= r.number_field  'cook_time' %></p>
+    5:     <p>Servings: <%= r.number_field  'servings' %></p>
+    6:     <p>Servings: <%= r.text_field  'origin' %></p>
+    7:     <%= f.submit "Save changes" %>
+    8: <% end %>
+    9: <%= link_to 'Back', {:action => 'list' } %>
+  app/views/recipes/edit.html.erb:7:in `block in _app_views_recipes_edit_html_erb__1882901619406520943_70272659014840'
+  app/views/recipes/edit.html.erb:1:in `_app_views_recipes_edit_html_erb__1882901619406520943_70272659014840'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.9ms)
+
+
+Started GET "/recipes/9/edit" for 127.0.0.1 at 2016-04-29 18:08:36 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 9[0m
+  Rendered recipes/edit.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionController::RoutingError (No route matches {:action=>"list", :controller=>"recipes"}):
+  app/views/recipes/edit.html.erb:9:in `_app_views_recipes_edit_html_erb__1882901619406520943_70272653187920'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 18:08:52 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/9/edit" for 127.0.0.1 at 2016-04-29 18:08:54 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 9[0m
+  Rendered recipes/edit.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionController::RoutingError (No route matches {:action=>"list", :controller=>"recipes"}):
+  app/views/recipes/edit.html.erb:9:in `_app_views_recipes_edit_html_erb__1882901619406520943_70272653187920'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/recipes/9/edit" for 127.0.0.1 at 2016-04-29 18:09:12 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 9
+  Rendered recipes/edit.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionController::RoutingError (No route matches {:action=>"list", :controller=>"recipes"}):
+  app/views/recipes/edit.html.erb:9:in `_app_views_recipes_edit_html_erb__1882901619406520943_70272653187920'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/recipes/" for 127.0.0.1 at 2016-04-29 18:09:15 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/edit/9/" for 127.0.0.1 at 2016-04-29 18:09:17 -0400
+
+ActionController::RoutingError (No route matches [GET] "/recipes/edit/9"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/recipes/9/edit" for 127.0.0.1 at 2016-04-29 18:09:38 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 9
+  Rendered recipes/edit.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionController::RoutingError (No route matches {:action=>"list", :controller=>"recipes"}):
+  app/views/recipes/edit.html.erb:9:in `_app_views_recipes_edit_html_erb__1882901619406520943_70272653187920'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/recipes/9/edit" for 127.0.0.1 at 2016-04-29 18:09:51 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 9[0m
+  Rendered recipes/edit.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/recipes/9" for 127.0.0.1 at 2016-04-29 18:09:58 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qiJ6C6hykWbVtt4hcRymF7mmI4/5K311tt8a2IwYK/c=", "recipe"=>{"title"=>"Grilled Hamburgers foopoop", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems"}, "commit"=>"Save changes", "id"=>"9"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", "9"]]
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `update!' for #<Recipe:0x007fd341da7818>):
+  app/controllers/recipes_controller.rb:42:in `update'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.8ms)
+
+
+Started PUT "/recipes/9" for 127.0.0.1 at 2016-04-29 18:10:59 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qiJ6C6hykWbVtt4hcRymF7mmI4/5K311tt8a2IwYK/c=", "recipe"=>{"title"=>"Grilled Hamburgers foopoop", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems"}, "commit"=>"Save changes", "id"=>"9"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", "9"]]
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `update!' for #<Recipe:0x007fd3411f8eb8>):
+  app/controllers/recipes_controller.rb:42:in `update'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.5ms)
+
+
+Started GET "/recipes/9/edit" for 127.0.0.1 at 2016-04-29 18:11:02 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 9
+  Rendered recipes/edit.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/recipes/9" for 127.0.0.1 at 2016-04-29 18:11:02 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qiJ6C6hykWbVtt4hcRymF7mmI4/5K311tt8a2IwYK/c=", "recipe"=>{"title"=>"Grilled Hamburgers h", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems"}, "commit"=>"Save changes", "id"=>"9"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", "9"]]
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `update!' for #<Recipe:0x007fd343300fc0>):
+  app/controllers/recipes_controller.rb:42:in `update'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.4ms)
+
+
+Started PUT "/recipes/9" for 127.0.0.1 at 2016-04-29 18:11:06 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qiJ6C6hykWbVtt4hcRymF7mmI4/5K311tt8a2IwYK/c=", "recipe"=>{"title"=>"Grilled Hamburgers hggggg", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems"}, "commit"=>"Save changes", "id"=>"9"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", "9"]]
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `update!' for #<Recipe:0x007fd341142a00>):
+  app/controllers/recipes_controller.rb:42:in `update'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.7ms)
+
+
+Started GET "/recipes/9/edit" for 127.0.0.1 at 2016-04-29 18:11:45 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 9[0m
+  Rendered recipes/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 9ms (Views: 4.1ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/recipes/9" for 127.0.0.1 at 2016-04-29 18:11:48 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qiJ6C6hykWbVtt4hcRymF7mmI4/5K311tt8a2IwYK/c=", "recipe"=>{"title"=>"Grilled Hamburgers hggggggg", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems"}, "commit"=>"Save changes", "id"=>"9"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", "9"]]
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (private method `update' called for #<Recipe:0x007fd341269bb8>):
+  app/controllers/recipes_controller.rb:42:in `update'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.7ms)
+
+
+Started GET "/recipes/9" for 127.0.0.1 at 2016-04-29 18:13:27 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 9[0m
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 9
+  [1m[36mStep Load (0.1ms)[0m  [1mSELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 9[0m
+  Rendered recipes/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 13ms (Views: 7.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 18:13:29 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/edit/9/" for 127.0.0.1 at 2016-04-29 18:13:35 -0400
+
+ActionController::RoutingError (No route matches [GET] "/recipes/edit/9"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/recipes/edit/9/" for 127.0.0.1 at 2016-04-29 18:14:19 -0400
+
+ActionController::RoutingError (No route matches [GET] "/recipes/edit/9"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/recipes/edit/9/" for 127.0.0.1 at 2016-04-29 18:14:22 -0400
+
+ActionController::RoutingError (No route matches [GET] "/recipes/edit/9"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 18:14:24 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/9/edit" for 127.0.0.1 at 2016-04-29 18:14:24 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 9
+  Rendered recipes/edit.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/recipes/9" for 127.0.0.1 at 2016-04-29 18:14:31 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qiJ6C6hykWbVtt4hcRymF7mmI4/5K311tt8a2IwYK/c=", "recipe"=>{"title"=>"Grilled Hamburgers goodshit", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems"}, "commit"=>"Save changes", "id"=>"9"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", "9"]]
+Completed 500 Internal Server Error in 1ms
+
+TypeError (no implicit conversion of Symbol into String):
+  app/controllers/recipes_controller.rb:40:in `recipe_params'
+  app/controllers/recipes_controller.rb:45:in `update'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.7ms)
+
+
+Started GET "/recipes/9" for 127.0.0.1 at 2016-04-29 18:16:15 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 9
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = 9[0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = 9
+  Rendered recipes/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 12ms (Views: 7.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 18:16:16 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/9/edit" for 127.0.0.1 at 2016-04-29 18:16:18 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 9
+  Rendered recipes/edit.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/recipes/9" for 127.0.0.1 at 2016-04-29 18:16:22 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qiJ6C6hykWbVtt4hcRymF7mmI4/5K311tt8a2IwYK/c=", "recipe"=>{"title"=>"Grilled Hamburgers goodshit", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems"}, "commit"=>"Save changes", "id"=>"9"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", "9"]]
+Completed 500 Internal Server Error in 1ms
+
+TypeError (no implicit conversion of Symbol into String):
+  app/controllers/recipes_controller.rb:40:in `recipe_params'
+  app/controllers/recipes_controller.rb:45:in `update'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.5ms)
+
+
+Started GET "/recipes/9/edit" for 127.0.0.1 at 2016-04-29 18:18:17 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 9
+  Rendered recipes/edit.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 23ms (Views: 17.8ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/recipes/9" for 127.0.0.1 at 2016-04-29 18:18:21 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qiJ6C6hykWbVtt4hcRymF7mmI4/5K311tt8a2IwYK/c=", "recipe"=>{"title"=>"Grilled Hamburgers goodshit", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems"}, "commit"=>"Save changes", "id"=>"9"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", "9"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "recipes" SET "title" = 'Grilled Hamburgers goodshit' WHERE "recipes"."id" = 9[0m
+  [1m[35m (2.0ms)[0m  commit transaction
+Redirected to 
+Completed 500 Internal Server Error in 6ms
+
+ActionController::RoutingError (No route matches {:action=>"list", :controller=>"recipes"}):
+  app/controllers/recipes_controller.rb:46:in `update'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started PUT "/recipes/9" for 127.0.0.1 at 2016-04-29 18:18:32 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qiJ6C6hykWbVtt4hcRymF7mmI4/5K311tt8a2IwYK/c=", "recipe"=>{"title"=>"Grilled Hamburgers goodshit", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems"}, "commit"=>"Save changes", "id"=>"9"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", "9"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/recipes
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 18:18:32 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/9/edit" for 127.0.0.1 at 2016-04-29 18:18:36 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 9[0m
+  Rendered recipes/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/recipes/9" for 127.0.0.1 at 2016-04-29 18:18:41 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qiJ6C6hykWbVtt4hcRymF7mmI4/5K311tt8a2IwYK/c=", "recipe"=>{"title"=>"Grilled Hamburgers badshit", "prep_time"=>"15", "cook_time"=>"10", "servings"=>"4", "origin"=>"Health Enhancement Systems"}, "commit"=>"Save changes", "id"=>"9"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", "9"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "recipes" SET "title" = 'Grilled Hamburgers badshit' WHERE "recipes"."id" = 9
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/recipes
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-29 18:18:41 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms)

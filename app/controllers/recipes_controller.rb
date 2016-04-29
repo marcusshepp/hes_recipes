@@ -2,12 +2,22 @@ class RecipesController < ApplicationController
     # GET /recipes
     def index
         @recipes = Recipe.all
-        @foo = [1 , 2]
     end
 
     # GET /recipes/:id
     def show
-        @foo = Recipe.find_all_by_id(params["id"])[0]
+        @recipe = Recipe.find_all_by_id(params["id"])[0]
+        if (params.has_key?(:delete))
+            @recipe.destroy
+        elsif (params.has_key?(:update))
+            @recipe.update_attributes({
+                :title => params[:title],
+                :prep_time => params[:prep_time],
+                :cook_time => params[:cook_time],
+                :servings => params[:servings],
+                :origin => params[:origin],
+            }, update_only => true)
+        end
     end
 
     # GET /recipes/new
@@ -18,30 +28,24 @@ class RecipesController < ApplicationController
     # POST /recipes
     :verify_authenticity_token
     def create
-        print request.POST
-        @r = Recipe.new({
-            :title => params[:title],
-            :prep_time => params[:prep_time],
-            :cook_time => params[:cook_time],
-            :servings => params[:servings],
-            :origin => params[:origin],
-            })
-        if @r.save
-            print @r
-        else
-            print "WTF"
-        end
+        @r = Recipe.create(params[:recipe])
     end
 
     # GET /recipes/:id/edit
     def edit
+        @recipe = Recipe.find_all_by_id(params["id"])[0]
     end
-
+    
     # PUT /recipes/:id
     def update
+        @r = Recipe.find(params[:id])
+        if @r.update_attributes(params[:recipe])
+            redirect_to :action => "index"
+        end
     end
 
     # DELETE /recipes/:id
     def destroy
+        Recipe.find(params[:id]).destroy
     end
 end
