@@ -962,3 +962,622 @@ Processing by RecipesController#index as HTML
   [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
   Rendered recipes/index.html.erb within layouts/application (1.0ms)
 Completed 200 OK in 8ms (Views: 2.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-29 13:22:41 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 13:23:00 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms
+
+ActionView::MissingTemplate (Missing template recipes/show, application/show with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder]}. Searched in:
+  * "/Users/sheph2mj/projects/health_wellness_challenge/HESRecipes/app/views"
+):
+  actionpack (3.2.2) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.2) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.2) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.2) lib/action_view/renderer/template_renderer.rb:29:in `determine_template'
+  actionpack (3.2.2) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.2) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.2) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:109:in `_render_template'
+  actionpack (3.2.2) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.2) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.2) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.2) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (3.2.2) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.2) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.2) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:414:in `_run__3781174703294555203__process_action__3913037397492515108__callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.2) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.2) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+  activerecord (3.2.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.2) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.2) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.2) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.2) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:67:in `call'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:30:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:594:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.2) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `_run__2967363160154882833__call__352987019704213736__callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.3ms)
+
+
+Started GET "/recipes/1/show" for 127.0.0.1 at 2016-04-29 13:23:06 -0400
+
+ActionController::RoutingError (No route matches [GET] "/recipes/1/show"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 13:23:43 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered recipes/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 13:24:58 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered recipes/show.html.erb within layouts/application (799.6ms)
+Completed 500 Internal Server Error in 803ms
+
+ActionView::Template::Error (undefined local variable or method `recipe' for #<#<Class:0x007fd34120aa50>:0x007fd341b3a2d8>):
+    1: <div class="recipe_detail_container">
+    2:     <div><%= link_to recipe.title, recipe %></div>
+    3:     <div><%= recipe.servings %></div>
+    4:     <div><%= recipe.cook_time %></div>
+    5:     <div><%= recipe.prep_time %></div>
+  app/views/recipes/show.html.erb:2:in `_app_views_recipes_show_html_erb___2559008481322972427_70272658571860'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.2ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 13:26:07 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 'id'[0m
+  Rendered recipes/show.html.erb within layouts/application (739.4ms)
+Completed 500 Internal Server Error in 748ms
+
+ActionView::Template::Error (undefined local variable or method `recipe' for #<#<Class:0x007fd342447060>:0x007fd341aadba8>):
+    1: <div class="recipe_detail_container">
+    2:     <div><%= link_to recipe.title, recipe %></div>
+    3:     <div><%= recipe.servings %></div>
+    4:     <div><%= recipe.cook_time %></div>
+    5:     <div><%= recipe.prep_time %></div>
+  app/views/recipes/show.html.erb:2:in `_app_views_recipes_show_html_erb___2559008481322972427_70272658571860'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 13:26:29 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 'id'
+  Rendered recipes/show.html.erb within layouts/application (691.1ms)
+Completed 500 Internal Server Error in 695ms
+
+ActionView::Template::Error (undefined local variable or method `recipe' for #<#<Class:0x007fd342447060>:0x007fd34244c498>):
+    1: <div class="recipe_detail_container">
+    2:     <div><%= recipe.title %></div>
+    3:     <div><%= recipe.servings %></div>
+    4:     <div><%= recipe.cook_time %></div>
+    5:     <div><%= recipe.prep_time %></div>
+  app/views/recipes/show.html.erb:2:in `_app_views_recipes_show_html_erb___2559008481322972427_70272653186500'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.4ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 13:26:33 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 'id'[0m
+  Rendered recipes/show.html.erb within layouts/application (716.0ms)
+Completed 500 Internal Server Error in 718ms
+
+ActionView::Template::Error (undefined local variable or method `recipe' for #<#<Class:0x007fd342447060>:0x007fd341ab4318>):
+    1: <div class="recipe_detail_container">
+    2:     <div><%= recipe.title %></div>
+    3:     <div><%= recipe.servings %></div>
+    4:     <div><%= recipe.cook_time %></div>
+    5:     <div><%= recipe.prep_time %></div>
+  app/views/recipes/show.html.erb:2:in `_app_views_recipes_show_html_erb___2559008481322972427_70272653186500'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 13:27:59 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 'id'
+  Rendered recipes/show.html.erb within layouts/application (685.3ms)
+Completed 500 Internal Server Error in 688ms
+
+ActionView::Template::Error (undefined local variable or method `recipe' for #<#<Class:0x007fd341b63638>:0x007fd341b62170>):
+    1: <div class="recipe_detail_container">
+    2:     <div><%= recipe.title %></div>
+    3:     <div><%= recipe.servings %></div>
+    4:     <div><%= recipe.cook_time %></div>
+    5:     <div><%= recipe.prep_time %></div>
+  app/views/recipes/show.html.erb:2:in `_app_views_recipes_show_html_erb___2559008481322972427_70272653186500'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 13:28:12 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 'id'[0m
+  Rendered recipes/show.html.erb within layouts/application (708.3ms)
+Completed 500 Internal Server Error in 710ms
+
+ActionView::Template::Error (undefined local variable or method `recipe' for #<#<Class:0x007fd341b63638>:0x007fd3425664a0>):
+    1: <div class="recipe_detail_container">
+    2:     <div><%= recipe.title %></div>
+    3:     <div><%= recipe.servings %></div>
+    4:     <div><%= recipe.cook_time %></div>
+    5:     <div><%= recipe.prep_time %></div>
+  app/views/recipes/show.html.erb:2:in `_app_views_recipes_show_html_erb___2559008481322972427_70272653186500'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 13:28:14 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 'id'
+  Rendered recipes/show.html.erb within layouts/application (713.4ms)
+Completed 500 Internal Server Error in 715ms
+
+ActionView::Template::Error (undefined local variable or method `recipe' for #<#<Class:0x007fd341b63638>:0x007fd341bcad88>):
+    1: <div class="recipe_detail_container">
+    2:     <div><%= recipe.title %></div>
+    3:     <div><%= recipe.servings %></div>
+    4:     <div><%= recipe.cook_time %></div>
+    5:     <div><%= recipe.prep_time %></div>
+  app/views/recipes/show.html.erb:2:in `_app_views_recipes_show_html_erb___2559008481322972427_70272653186500'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 13:28:37 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 'id'[0m
+  Rendered recipes/show.html.erb within layouts/application (698.9ms)
+Completed 500 Internal Server Error in 701ms
+
+ActionView::Template::Error (undefined local variable or method `recipe' for #<#<Class:0x007fd341b40f70>:0x007fd341b4bc18>):
+    1: <div class="recipe_detail_container">
+    2:     <div><%= recipe.title %></div>
+    3:     <div><%= recipe.servings %></div>
+    4:     <div><%= recipe.cook_time %></div>
+    5:     <div><%= recipe.prep_time %></div>
+  app/views/recipes/show.html.erb:2:in `_app_views_recipes_show_html_erb___2559008481322972427_70272653186500'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.7ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 13:28:52 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 'id'
+  Rendered recipes/show.html.erb within layouts/application (666.2ms)
+Completed 500 Internal Server Error in 668ms
+
+ActionView::Template::Error (undefined local variable or method `recipe' for #<#<Class:0x007fd341b51ff0>:0x007fd341b50510>):
+    1: <div class="recipe_detail_container">
+    2:     <div><%= recipe.title %></div>
+    3:     <div><%= recipe.servings %></div>
+    4:     <div><%= recipe.cook_time %></div>
+    5:     <div><%= recipe.prep_time %></div>
+  app/views/recipes/show.html.erb:2:in `_app_views_recipes_show_html_erb___2559008481322972427_70272653186500'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.5ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 13:29:08 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1[0m
+  Rendered recipes/show.html.erb within layouts/application (656.4ms)
+Completed 500 Internal Server Error in 662ms
+
+ActionView::Template::Error (undefined local variable or method `recipe' for #<#<Class:0x007fd341158918>:0x007fd3411636d8>):
+    1: <div class="recipe_detail_container">
+    2:     <div><%= recipe.title %></div>
+    3:     <div><%= recipe.servings %></div>
+    4:     <div><%= recipe.cook_time %></div>
+    5:     <div><%= recipe.prep_time %></div>
+  app/views/recipes/show.html.erb:2:in `_app_views_recipes_show_html_erb___2559008481322972427_70272653186500'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 13:29:17 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  Rendered recipes/show.html.erb within layouts/application (699.8ms)
+Completed 500 Internal Server Error in 705ms
+
+ActionView::Template::Error (undefined local variable or method `recipe' for #<#<Class:0x007fd34341d9f8>:0x007fd34341cd28>):
+    1: <div class="recipe_detail_container">
+    2:     <div><%= recipe.title %></div>
+    3:     <div><%= recipe.servings %></div>
+    4:     <div><%= recipe.cook_time %></div>
+    5:     <div><%= recipe.prep_time %></div>
+  app/views/recipes/show.html.erb:2:in `_app_views_recipes_show_html_erb___2559008481322972427_70272653186500'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 13:29:43 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1[0m
+  Rendered recipes/show.html.erb within layouts/application (674.9ms)
+Completed 500 Internal Server Error in 681ms
+
+ActionView::Template::Error (undefined local variable or method `recipe' for #<#<Class:0x007fd3432e9c58>:0x007fd3432e8df8>):
+    1: <div class="recipe_detail_container">
+    2:     <div><%= recipe.title %></div>
+    3:     <div><%= recipe.servings %></div>
+    4:     <div><%= recipe.cook_time %></div>
+    5:     <div><%= recipe.prep_time %></div>
+  app/views/recipes/show.html.erb:2:in `_app_views_recipes_show_html_erb___2559008481322972427_70272653186500'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.8ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 13:30:13 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  Rendered recipes/show.html.erb within layouts/application (737.8ms)
+Completed 500 Internal Server Error in 740ms
+
+ActionView::Template::Error (undefined local variable or method `recipe' for #<#<Class:0x007fd3432e9c58>:0x007fd341c39170>):
+    1: <div class="recipe_detail_container">
+    2:     <div><%= recipe.title %></div>
+    3:     <div><%= recipe.servings %></div>
+    4:     <div><%= recipe.cook_time %></div>
+    5:     <div><%= recipe.prep_time %></div>
+  app/views/recipes/show.html.erb:2:in `_app_views_recipes_show_html_erb___2559008481322972427_70272659079420'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 13:30:20 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1[0m
+  Rendered recipes/show.html.erb within layouts/application (688.1ms)
+Completed 500 Internal Server Error in 690ms
+
+ActionView::Template::Error (undefined local variable or method `recipe' for #<#<Class:0x007fd3432e9c58>:0x007fd34343df00>):
+    1: <div class="recipe_detail_container">
+    2:     <div><% recipe.title %></div>
+    3:     <div><% recipe.servings %></div>
+    4:     <div><% recipe.cook_time %></div>
+    5:     <div><% recipe.prep_time %></div>
+  app/views/recipes/show.html.erb:2:in `_app_views_recipes_show_html_erb___2559008481322972427_70272671672260'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 13:30:23 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  Rendered recipes/show.html.erb within layouts/application (702.3ms)
+Completed 500 Internal Server Error in 705ms
+
+ActionView::Template::Error (undefined local variable or method `recipe' for #<#<Class:0x007fd3432e9c58>:0x007fd341161748>):
+    1: <div class="recipe_detail_container">
+    2:     <div><%= recipe.title %></div>
+    3:     <div><%= recipe.servings %></div>
+    4:     <div><%= recipe.cook_time %></div>
+    5:     <div><%= recipe.prep_time %></div>
+  app/views/recipes/show.html.erb:2:in `_app_views_recipes_show_html_erb___2559008481322972427_70272653385660'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.5ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 13:31:14 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1[0m
+  Rendered recipes/show.html.erb within layouts/application (653.5ms)
+Completed 500 Internal Server Error in 659ms
+
+ActionView::Template::Error (undefined local variable or method `foo' for #<#<Class:0x007fd3433192f0>:0x007fd343318508>):
+    1: <div class="recipe_detail_container">
+    2:     <div><%= foo.title %></div>
+    3:     <div><%= foo.servings %></div>
+    4:     <div><%= foo.cook_time %></div>
+    5:     <div><%= foo.prep_time %></div>
+  app/views/recipes/show.html.erb:2:in `_app_views_recipes_show_html_erb___2559008481322972427_70272663369060'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.6ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 13:32:52 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1
+  Rendered recipes/show.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `title' for #<Array:0x007fd3411536e8>):
+    1: <div class="recipe_detail_container">
+    2:     <div><%= @foo.title %></div>
+    3:     <div><%= @foo.servings %></div>
+    4:     <div><%= @foo.cook_time %></div>
+    5:     <div><%= @foo.prep_time %></div>
+  app/views/recipes/show.html.erb:2:in `_app_views_recipes_show_html_erb___2559008481322972427_70272653350740'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.8ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2016-04-29 13:33:06 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = 1[0m
+  Rendered recipes/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-29 13:33:37 -0400
+Processing by RecipesController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActionView::MissingTemplate (Missing template recipes/new, application/new with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder]}. Searched in:
+  * "/Users/sheph2mj/projects/health_wellness_challenge/HESRecipes/app/views"
+):
+  actionpack (3.2.2) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.2) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.2) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.2) lib/action_view/renderer/template_renderer.rb:29:in `determine_template'
+  actionpack (3.2.2) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.2) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.2) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:109:in `_render_template'
+  actionpack (3.2.2) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.2) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.2) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.2) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (3.2.2) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.2) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.2) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:414:in `_run__3781174703294555203__process_action__2387379965345868517__callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.2) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.2) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+  activerecord (3.2.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.2) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.2) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.2) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.2) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:67:in `call'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:30:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:594:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.2) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `_run__2967363160154882833__call__352987019704213736__callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.3ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-29 13:39:26 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-29 13:40:00 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)

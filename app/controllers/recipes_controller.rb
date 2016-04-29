@@ -7,6 +7,7 @@ class RecipesController < ApplicationController
 
     # GET /recipes/:id
     def show
+        @foo = Recipe.find_all_by_id(params["id"])[0]
     end
 
     # GET /recipes/new
