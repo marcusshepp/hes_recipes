@@ -5,6 +5,9 @@ body{
     width: 80%;
     margin: 0 auto;
 }
+/* COMMON */
+.hide{ display: none; }
+.display { display: block;}
 /* NAV */
 .nav_container{
     box-shadow: var(--box-shadow);
@@ -18,15 +21,74 @@ body{
     line-height: 220%;
     cursor: pointer;
 }
+.nav_btn{
+    text-decoration: none;
+    color: black;
+}
 .nav_btn:hover{
     background-color: grey;
+}
+.nav_btn:hover{
+    color: white;
 }
 .title:hover{
     background-color: inherit;
     cursor: default;
+    color: black;
 }
 .main,
 .content,
 .footer{
     padding: 1em;
+}
+/* NEW.HTML */
+.new_recipe_container,
+.forms_container,
+.forms_headers_container,
+.forms_forms_container{
+    display: block;
+}
+.forms_forms_container{
+    width: 100%;
+}
+.form_header,
+.recipe_form{
+    display: inline-block;
+}
+.recipe_form{
+    width: 70%;
+    margin-left: 3%;
+}
+.steps_ingredients_all_btn{
+    margin: 1em;
+    cursor: pointer;
+}
+.recipe_form_field{
+    display: block;
+    margin: 0.8em auto;
+}
+.recipe_form_field > *{
+    display: inline-block;
+}
+.recipe_form_label{
+    width: 50%;
+}
+.recipe_form_text_input,
+.recipe_form_int_input{
+    height: 20px;
+    width: 100%;
+}
+.recipe_form_dependency_input{
+    height: 20px;
+    width: 48%;
+}
+.dependency_header,
+.indiv_dep_header{
+    position: relative;
+    margin: 0.7em auto;
+}
+.dependency_header > span,
+.indiv_dep_header > span{
+    position: absolute;
+    right: 0%;
 }
