@@ -5735,3 +5735,801 @@ Processing by RecipesController#index as HTML
   [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
   Rendered recipes/index.html.erb within layouts/application (1.2ms)
 Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-30 17:20:01 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (1.0ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 55ms (Views: 6.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-30 17:20:01 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:20:04 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-30 17:20:06 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:20:07 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:21:23 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:21:25 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:21:26 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:21:37 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:21:39 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:21:45 -0400
+Processing by RecipesController#new as HTML
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" 
+  Rendered recipes/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 23ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:22:11 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  Rendered recipes/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:26:39 -0400
+Processing by RecipesController#new as HTML
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" 
+ERROR: compiling _app_views_recipes_new_html_erb___3444589077949688987_70272663434700 RAISED /Users/sheph2mj/projects/health_wellness_challenge/HESRecipes/app/views/recipes/new.html.erb:39: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/sheph2mj/projects/health_wellness_challenge/HESRecipes/app/views/recipes/new.html.erb:41: syntax error, unexpected end-of-input, expecting keyword_end
+Function body:           def _app_views_recipes_new_html_erb___3444589077949688987_70272663434700(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "recipes/new";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<div class="recipe_form_container">
+    <form class="recipe_form" action="http://127.0.0.1:3000/recipes" method="POST">
+        <div class="recipe_form_field">
+            <label for="title" class="recipe_form_label">Title:</label>
+            <input type="text" name="recipe[title]" class="recipe_form_text_input" \\
+                max_length="50">
+        </div>
+        <div class="recipe_form_field">
+            <label for="prep_time" class="recipe_form_label">Prep Time:</label>
+            <input type="number" step="1" name="recipe[prep_time]" class="recipe_form_int_input">
+        </div>
+        <div class="recipe_form_field">
+            <label for="cook_time" class="recipe_form_label">Cook Time:</label>
+            <input type="number" step="1" name="recipe[cook_time]" class="recipe_form_int_input">
+        </div>
+        <div class="recipe_form_field">
+            <label for="servings" class="recipe_form_label">Servings:</label>
+            <input type="number" step="1" name="recipe[servings]" class="recipe_form_int_input">
+        </div>
+        <div class="recipe_form_field">
+            <label for="origin" class="recipe_form_label">Origin:</label>
+            <input type="text" name="recipe[origin]" class="recipe_form_text_input" \\
+                max_length="100">
+        </div>
+        <input type="submit" value="Submit" class="recipe_form_submit_btn">
+    </form>
+    
+    <div class="section_header">
+        All Avaiable Ingredients:
+    </div>
+    <div class="ingredients_all">
+');         @ingredients.each do |i| 
+@output_buffer.safe_concat('        <div class="ingredient">
+            <div class="ingredient_item">');@output_buffer.append= ( i.item );@output_buffer.safe_concat('</div>
+            <div class="ingredient_sequence">');@output_buffer.append= ( i.sequence );@output_buffer.safe_concat('</div>
+        </div>
+    </div>
+</div>');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/template.rb:285:in `module_eval'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/template.rb:285:in `compile'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/template.rb:233:in `compile!'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/template.rb:142:in `block in render'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/notifications.rb:125:in `instrument'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/template.rb:141:in `render'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:42:in `block (2 levels) in render_template'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/notifications.rb:123:in `block in instrument'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/notifications.rb:123:in `instrument'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:41:in `block in render_template'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:49:in `render_with_layout'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:40:in `render_template'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:13:in `render'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_view/renderer/renderer.rb:17:in `render'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:109:in `_render_template'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:88:in `render'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/rendering.rb:16:in `render'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/Library/Ruby/Gems/2.0.0/gems/activerecord-3.2.2/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/abstract_controller/base.rb:167:in `process_action'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:414:in `_run__3781174703294555203__process_action__2387379965345868517__callbacks'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/notifications.rb:123:in `block in instrument'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/notifications.rb:123:in `instrument'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+/Library/Ruby/Gems/2.0.0/gems/activerecord-3.2.2/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/abstract_controller/base.rb:121:in `process'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:45:in `process'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal.rb:203:in `dispatch'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_controller/metal.rb:246:in `block in action'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:67:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:30:in `call'
+/Library/Ruby/Gems/2.0.0/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/Library/Ruby/Gems/2.0.0/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/Library/Ruby/Gems/2.0.0/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:594:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Library/Ruby/Gems/2.0.0/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+/Library/Ruby/Gems/2.0.0/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/Library/Ruby/Gems/2.0.0/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+/Library/Ruby/Gems/2.0.0/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+/Library/Ruby/Gems/2.0.0/gems/activerecord-3.2.2/lib/active_record/query_cache.rb:64:in `call'
+/Library/Ruby/Gems/2.0.0/gems/activerecord-3.2.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:405:in `_run__2967363160154882833__call__352987019704213736__callbacks'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/Library/Ruby/Gems/2.0.0/gems/railties-3.2.2/lib/rails/rack/logger.rb:26:in `call_app'
+/Library/Ruby/Gems/2.0.0/gems/railties-3.2.2/lib/rails/rack/logger.rb:16:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/Library/Ruby/Gems/2.0.0/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+/Library/Ruby/Gems/2.0.0/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+/Library/Ruby/Gems/2.0.0/gems/activesupport-3.2.2/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Library/Ruby/Gems/2.0.0/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+/Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/static.rb:61:in `call'
+/Library/Ruby/Gems/2.0.0/gems/railties-3.2.2/lib/rails/engine.rb:479:in `call'
+/Library/Ruby/Gems/2.0.0/gems/railties-3.2.2/lib/rails/application.rb:220:in `call'
+/Library/Ruby/Gems/2.0.0/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+/Library/Ruby/Gems/2.0.0/gems/railties-3.2.2/lib/rails/rack/log_tailer.rb:14:in `call'
+/Library/Ruby/Gems/2.0.0/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered recipes/new.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (/Users/sheph2mj/projects/health_wellness_challenge/HESRecipes/app/views/recipes/new.html.erb:39: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/sheph2mj/projects/health_wellness_challenge/HESRecipes/app/views/recipes/new.html.erb:41: syntax error, unexpected end-of-input, expecting keyword_end):
+    36:         </div>
+    37:     </div>
+    38: </div>
+  actionpack (3.2.2) lib/action_view/template.rb:285:in `module_eval'
+  actionpack (3.2.2) lib/action_view/template.rb:285:in `compile'
+  actionpack (3.2.2) lib/action_view/template.rb:233:in `compile!'
+  actionpack (3.2.2) lib/action_view/template.rb:142:in `block in render'
+  activesupport (3.2.2) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.2) lib/action_view/template.rb:141:in `render'
+  actionpack (3.2.2) lib/action_view/renderer/template_renderer.rb:42:in `block (2 levels) in render_template'
+  actionpack (3.2.2) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.2) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.2) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.2) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.2) lib/action_view/renderer/template_renderer.rb:41:in `block in render_template'
+  actionpack (3.2.2) lib/action_view/renderer/template_renderer.rb:49:in `render_with_layout'
+  actionpack (3.2.2) lib/action_view/renderer/template_renderer.rb:40:in `render_template'
+  actionpack (3.2.2) lib/action_view/renderer/template_renderer.rb:13:in `render'
+  actionpack (3.2.2) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.2) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:109:in `_render_template'
+  actionpack (3.2.2) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.2) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.2) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.2) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (3.2.2) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.2) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.2) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:414:in `_run__3781174703294555203__process_action__2387379965345868517__callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.2) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.2) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+  activerecord (3.2.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.2) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.2) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.2) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.2) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:67:in `call'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:30:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:594:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.2) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `_run__2967363160154882833__call__352987019704213736__callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:26:56 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  Rendered recipes/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:27:22 -0400
+Processing by RecipesController#new as HTML
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" 
+  Rendered recipes/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:29:56 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 15ms (Views: 2.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:31:17 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:32:06 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:33:20 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:34:02 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.3ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:35:22 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:35:36 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:35:42 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:35:53 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:35:57 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:36:04 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:36:08 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:36:10 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:36:25 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:37:44 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:37:51 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:37:56 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:37:59 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:38:33 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:38:34 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:38:53 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:39:18 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-30 17:39:34 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:39:37 -0400
+Processing by RecipesController#new as HTML
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" 
+  [1m[36mStep Load (0.1ms)[0m  [1mSELECT "steps".* FROM "steps" [0m
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-30 17:39:38 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:39:39 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:40:02 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:40:20 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:41:54 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:42:12 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:42:19 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:42:26 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:42:33 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:42:36 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:42:49 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:43:17 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:43:28 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:43:39 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:43:43 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:43:48 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:44:01 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:44:09 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:44:18 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:44:23 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 17ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:44:56 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:45:14 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:45:24 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:45:35 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:45:47 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:46:03 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:46:21 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:46:43 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-30 17:46:48 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT "recipes".* FROM "recipes" [0m
+  Rendered recipes/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:46:49 -0400
+Processing by RecipesController#new as HTML
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" 
+  [1m[36mStep Load (0.1ms)[0m  [1mSELECT "steps".* FROM "steps" [0m
+  Rendered recipes/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2016-04-30 17:46:50 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" 
+  Rendered recipes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2016-04-30 17:46:53 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" [0m
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps" 
+  Rendered recipes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)

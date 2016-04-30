@@ -9,26 +9,21 @@ class RecipesController < ApplicationController
         @recipe = Recipe.find_all_by_id(params["id"])[0]
         if (params.has_key?(:delete))
             @recipe.destroy
-        elsif (params.has_key?(:update))
-            @recipe.update_attributes({
-                :title => params[:title],
-                :prep_time => params[:prep_time],
-                :cook_time => params[:cook_time],
-                :servings => params[:servings],
-                :origin => params[:origin],
-            }, update_only => true)
         end
     end
 
     # GET /recipes/new
     def new
         # render recipe creation form
+        @ingredients = Ingredient.all
+        @steps = Step.all
     end
 
     # POST /recipes
     :verify_authenticity_token
     def create
         @r = Recipe.create(params[:recipe])
+        
     end
 
     # GET /recipes/:id/edit

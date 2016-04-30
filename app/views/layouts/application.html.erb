@@ -7,17 +7,22 @@
 </head>
 <body>
     <div class="nav_container">
-        <%= link_to "All Recipes", "http://127.0.0.1:3000/recipes"%>
-        <%= link_to "Create New Recipe", "http://127.0.0.1:3000/recipes/new"%>
-    </div>
-    <div id="main">
-        <div id="title">
+        <div class="nav_btn title">
             HES Recipes
         </div>
-        <div id="content">
+        <div class="nav_btn">
+            <%= link_to "All Recipes", "http://127.0.0.1:3000/recipes"%>
+        </div>
+        <div class="nav_btn">
+            <%= link_to "Create New Recipe", "http://127.0.0.1:3000/recipes/new"%>
+        </div>
+    </div>
+    <div class="main">
+
+        <div class="content">
             <%= yield %>
         </div>
-        <div id="footer">
+        <div class="footer">
             &copy; 2012 Health Enhancement Systems
         </div>
     </div>

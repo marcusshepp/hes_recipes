@@ -24,4 +24,29 @@
         </div>
         <input type="submit" value="Submit" class="recipe_form_submit_btn">
     </form>
+    <div class="steps_ingredients_all">
+        <div class="section_header">
+            All Avaiable Ingredients:
+        </div>
+        <div class="ingredients_all">
+            <% @ingredients.each do |i| %>
+            <div class="ingredient">
+                <div class="ingredient_item">Item: <%= i.item %></div>
+                <div class="ingredient_sequence">Sequence: <%= i.sequence %></div>
+            </div>
+            <% end %>
+        </div>
+
+        <div class="section_header">
+            All Avaiable Steps:
+        </div>
+        <div class="steps_all">
+            <% @steps.each do |s| %>
+            <div class="step">
+                <div class="step_description">Description: <%= s.description %></div>
+                <div class="step_sequence">Sequence: <%= s.sequence %></div>
+            </div>
+            <% end %>
+        </div>        
+    </div>
 </div>
