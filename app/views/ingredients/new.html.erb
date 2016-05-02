@@ -1,4 +1,4 @@
-<%= form_for @ingredient, :url =>{ :action => "create" } do |i| %>
+<%= form_for @ingredient, :url =>{ :action => "create" }, :html => {:onsubmit => "return val_ing();"} do |i| %>
     <p>
         <div class="">
             Recipe for this Ingredient:
@@ -13,8 +13,10 @@
             <% end %>
         </select>
     </p>
-    <p>Sequence (order in which this ingredient wil be added): <%= i.number_field  'sequence' %></p>
-    <p>Name of Ingredient: <%= i.text_field  'item' %></p>
+    <div class="sequence_val"></div>
+    <p>Sequence (order in which this ingredient wil be added): <%= i.number_field  'sequence', :class => "ingredient_seq" %></p>
+    <div class="name_val"></div>
+    <p>Name of Ingredient: <%= i.text_field  'item', :class => "ingredient_item" %></p>
     <%= i.submit "Save and Add 'Steps'" %>
     <%= i.submit "Save and Add Another Ingredient" %>
 <% end %>

@@ -1,4 +1,4 @@
-<%= form_for @step, :url =>{ :action => "create", :id =>@step.id } do |i| %>
+<%= form_for @step, :url =>{ :action => "create", :id =>@step.id }, :html => {:onsubmit => "return val_step();"}  do |i| %>
     <p>
         <div class="">
             This is a Step for which Recipe:
@@ -13,8 +13,10 @@
             <% end %>
         </select>
     </p>
-    <p>Step Number: <%= i.number_field  'sequence' %></p>
-    <p>Description: <%= i.text_field  'description' %></p>
+    <div class="step_num_val"></div>
+    <p>Step Number: <%= i.number_field  'sequence', :class => 'step_num' %></p>
+    <div class="desc_val"></div>
+    <p>Description: <%= i.text_field  'description', :class => 'description' %></p>
     <%= i.submit "Save And Continue" %>
     <%= i.submit "Save and Add Another Step" %>
 <% end %>

@@ -6,23 +6,31 @@
             </div>
         </div>
         <div class="forms_forms_container">
-            <form class="recipe_form" action="http://127.0.0.1:3000/recipes" method="POST">
+            <form class="recipe_form" action="http://127.0.0.1:3000/recipes" \
+                method="POST" onsubmit="return recipe_form_validation();">
                 <div class="recipe_form_field">
                     <label for="title" class="recipe_form_label">Title:</label>
-                    <input type="text" name="recipe[title]" class="recipe_form_text_input" \
-                        max_length="50">
+                    <div class="recipe_form_title_validation"></div>
+                    <input type="text" name="recipe[title]" \
+                        class="recipe_form_text_input recipe_form_title" max_length="50">
                 </div>
                 <div class="recipe_form_field">
                     <label for="prep_time" class="recipe_form_label">Prep Time (in minutes):</label>
-                    <input type="number" step="1" name="recipe[prep_time]" class="recipe_form_int_input">
+                    <div class="recipe_form_prep_validation"></div>
+                    <input type="number" step="1" name="recipe[prep_time]" \
+                        class="recipe_form_int_input recipe_form_prep">
                 </div>
                 <div class="recipe_form_field">
                     <label for="cook_time" class="recipe_form_label">Cook Time (in minutes):</label>
-                    <input type="number" step="1" name="recipe[cook_time]" class="recipe_form_int_input">
+                    <div class="recipe_form_cook_validation"></div>
+                    <input type="number" step="1" name="recipe[cook_time]" \
+                        class="recipe_form_int_input recipe_form_cook">
                 </div>
                 <div class="recipe_form_field">
                     <label for="servings" class="recipe_form_label">Servings:</label>
-                    <input type="number" step="1" name="recipe[servings]" class="recipe_form_int_input">
+                    <div class="recipe_form_servings_validation"></div>
+                    <input type="number" step="1" name="recipe[servings]" \
+                        class="recipe_form_int_input recipe_form_servings">
                 </div>
                 <div class="recipe_form_field">
                     <label for="origin" class="recipe_form_label">Origin:</label>

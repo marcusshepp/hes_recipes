@@ -43,6 +43,86 @@
             },
         });
     }
+    function recipe_form_validation(){
+        var form_valid = true;
+        // field values
+        var title = $(".recipe_form_title").val();
+        var prep = $(".recipe_form_prep").val();
+        var cook = $(".recipe_form_cook").val();
+        var servings = $(".recipe_form_servings").val();
+        // validation message containers
+        var title_v = $(".recipe_form_title_validation");
+        var prep_v = $(".recipe_form_prep_validation");
+        var cook_v = $(".recipe_form_cook_validation");
+        var servings_v = $(".recipe_form_servings_validation");
+        // check empty Required fields
+        if (title == ""){
+            title_v.html("<span class='validation_error'>Title Is Required</span>");
+            form_valid = false;
+        }
+        if (prep == ""){
+            prep_v.html("<span class='validation_error'>Preperation Time Is Required</span>");
+            form_valid = false;
+        }
+        if (servings == ""){
+            servings_v.html("<span class='validation_error'>Serving Size Is Required</span>");
+            form_valid = false;
+        }
+        // check for neg values
+        if (parseFloat(prep) < 0){
+            prep_v.html("<span class='validation_error'>Preperation Time must be greater than zero.</span>");
+            form_valid = false;
+        }
+        if (parseFloat(cook) < 0){
+            cook_v.html("<span class='validation_error'>Cook Time must be greater than zero.</span>");
+            form_valid = false;
+        }
+        if (parseFloat(servings) < 0){
+            servings_v.html("<span class='validation_error'>Serving Size must be greater than zero.</span>");
+            form_valid = false;
+        }
+        return form_valid;
+    }
+    function val_ing(){
+        var form_valid = true;
+        var seq = $(".ingredient_seq").val();
+        var seq_v = $(".sequence_val");
+        var item = $(".ingredient_item").val();
+        var item_v = $(".name_val");
+        if (seq == ""){
+            seq_v.html("<span class='validation_error'>Sequence Number is Required.</span>")
+            form_valid = false;
+        }
+        if (item == ""){
+            item_v.html("<span class='validation_error'>Item Name is Required.</span>")
+            form_valid = false;
+        }
+        if (parseFloat(seq) <= 0){
+            seq_v.html("<span class='validation_error'>Sequence Number must be greater than zero.</span>")
+            form_valid = false;
+        }
+        return form_valid;
+    }
+    function val_step(){
+        var form_valid = true;
+        var seq = $(".step_num").val();
+        var seq_v = $(".step_num_val");
+        var item = $(".description").val();
+        var item_v = $(".desc_val");
+        if (seq == ""){
+            seq_v.html("<span class='validation_error'>Step Number is Required.</span>")
+            form_valid = false;
+        }
+        if (item == ""){
+            item_v.html("<span class='validation_error'>Description is Required.</span>")
+            form_valid = false;
+        }
+        if (parseFloat(seq) <= 0){
+            seq_v.html("<span class='validation_error'>Step Number must be greater than zero.</span>")
+            form_valid = false;
+        }
+        return form_valid;
+    }
 </script>
 </body>
 </html>
