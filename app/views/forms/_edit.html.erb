@@ -1,0 +1,12 @@
+<%= form_for @ingredient, :url =>{:action => "edit", :controller => "ingredients", :id =>@ingredient} do |i| %>
+    <p>
+        <select class="" name="ingredient[recipe_id]">
+            <% Recipe.all.each do |r| %>
+                <option value="<% r.id %>"><%= r.title %></option>
+            <% end %>
+        </select>
+    </p>
+    <p>sequence: <%= i.number_field  'sequence' %></p>
+    <p>item: <%= i.text_field  'item' %></p>
+    <%= i.submit "Save changes" %>
+<% end %>

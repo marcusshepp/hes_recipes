@@ -1,0 +1,7 @@
+<% @ingredients.each do |ingredient| %>
+    <div class="">
+        <%= ingredient.item %>
+        <a href="http://127.0.0.1:3000/ingredients/<%= ingredient.id %>/edit">Edit</a>
+        <a href="http://127.0.0.1:3000/ingredients/<%= ingredient.id %>/?delete">Delete</a>
+    </div>
+<% end %>

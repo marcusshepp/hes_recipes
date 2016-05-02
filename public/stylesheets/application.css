@@ -8,6 +8,11 @@ body{
 /* COMMON */
 .hide{ display: none; }
 .display { display: block;}
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
 /* NAV */
 .nav_container{
     box-shadow: var(--box-shadow);

@@ -27,14 +27,13 @@ class RecipesController < ApplicationController
     :verify_authenticity_token
     def create
         @r = Recipe.create(params[:recipe])
-        print params
     end
 
     # GET /recipes/:id/edit
     def edit
         @recipe = Recipe.find_all_by_id(params["id"])[0]
     end
-    
+
     # PUT /recipes/:id
     def update
         @r = Recipe.find(params[:id])

@@ -43,16 +43,26 @@
             },
         });
     }
+    function delete_recipe(id){
+        $.ajax({
+            method: "GET",
+            url: "http://127.0.0.1:3000/recipes/"+id+"/?delete",
+            success: function(data){
+                window.location = "http://127.0.0.1:3000/recipes/";
+                console.log("success");
+            },
+        });
+    }
     function toggle_steps_ingredients_all(){
         var container_elem = $('.steps_ingredients_all');
         if (container_elem.hasClass("hide")){
-            container_elem.removeClass("hide"); 
-            container_elem.addClass("display"); 
+            container_elem.removeClass("hide");
+            container_elem.addClass("display");
         } else {
-            container_elem.addClass("hide"); 
-            container_elem.removeClass("display"); 
+            container_elem.addClass("hide");
+            container_elem.removeClass("display");
         }
-        
+
     }
     var number_of_ingredients = 1;
     var number_of_steps = 1;
