@@ -17,16 +17,13 @@ class RecipesController < ApplicationController
         # render recipe creation form
         @ingredients = Ingredient.all
         @steps = Step.all
-        next_recipe_id = Recipe.maximum(:id).next
-        # ingredient_data = params[:ingredient]
-        # ingredient_data[:recipe_id] = next_recipe_id
-        # Ingredient.create(ingredient_data)
     end
 
     # POST /recipes
     :verify_authenticity_token
     def create
         @r = Recipe.create(params[:recipe])
+        redirect_to url_for(:controller => :ingredients, :action => :new, :recipe_id => @r.id)
     end
 
     # GET /recipes/:id/edit

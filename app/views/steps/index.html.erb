@@ -1,0 +1,7 @@
+<% @steps.each do |step| %>
+    <div class="">
+        <%= step.description %>
+        <a href="http://127.0.0.1:3000/steps/<%= step.id %>/edit">Edit</a>
+        <a href="http://127.0.0.1:3000/steps/<%= step.id %>/?delete">Delete</a>
+    </div>
+<% end %>

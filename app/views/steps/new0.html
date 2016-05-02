@@ -1,0 +1,87 @@
+<div class="new_recipe_container">
+    <div class="forms_container">
+        <div class="forms_headers_container">
+            <div class="form_header">
+                Create new Recipe
+            </div>
+        </div>
+        <div class="forms_forms_container">
+            <form class="recipe_form" action="http://127.0.0.1:3000/recipes" method="POST">
+                <div class="recipe_form_field">
+                    <label for="title" class="recipe_form_label">Title:</label>
+                    <input type="text" name="recipe[title]" class="recipe_form_text_input" \
+                        max_length="50">
+                </div>
+                <div class="recipe_form_field">
+                    <label for="prep_time" class="recipe_form_label">Prep Time:</label>
+                    <input type="number" step="1" name="recipe[prep_time]" class="recipe_form_int_input">
+                </div>
+                <div class="recipe_form_field">
+                    <label for="cook_time" class="recipe_form_label">Cook Time:</label>
+                    <input type="number" step="1" name="recipe[cook_time]" class="recipe_form_int_input">
+                </div>
+                <div class="recipe_form_field">
+                    <label for="servings" class="recipe_form_label">Servings:</label>
+                    <input type="number" step="1" name="recipe[servings]" class="recipe_form_int_input">
+                </div>
+                <div class="recipe_form_field">
+                    <label for="origin" class="recipe_form_label">Origin:</label>
+                    <input type="text" name="recipe[origin]" class="recipe_form_text_input" \
+                        max_length="100">
+                </div>
+                <div class="dependency_header">Ingredients:<span onclick="add_new_dependency('ing')">Add New</span></div>
+                <div class="ingredients_container">
+                    <div class="ingredient ingredient1">
+                        <div class="indiv_dep_header">Ingredient 1<span onclick="delete_dependency('ing', '1')">Delete</span></div>
+                        <input type="text" name="ingredient[item]" class="recipe_form_dependency_input" \
+                            max_length="100">
+                        <input type="hidden" name="ingredient[recipe_id]" value="1">
+                        <input type="number" name="ingredient[sequence]" value="1" class="recipe_form_dependency_input">
+                    </div>
+                </div>
+                <div class="dependency_header">Steps<span onclick="add_new_dependency('step')">Add New</span></div>
+                <div class="steps_container">
+                    <div class="step step1">
+                        <div class="indiv_dep_header">Step 1<span onclick="delete_dependency('step', '1')">Delete</span></div>
+                        <input type="text" name="step[description]" class="recipe_form_dependency_input" \
+                            max_length="100">
+                        <input type="hidden" name="step[recipe_id]" value="1">
+                        <input type="number" name="step[sequence]" value="1" class="recipe_form_dependency_input">
+                    </div>
+                </div>
+                <input type="submit" value="Submit" class="recipe_form_submit_btn">
+            </form>
+        </div>
+    </div>
+    
+    
+    
+    <div class="steps_ingredients_all_btn" onclick="toggle_steps_ingredients_all()">
+        Show All Steps/Ingredients
+    </div>
+    <div class="steps_ingredients_all hide">
+        <div class="section_header">
+            All Avaiable Ingredients:
+        </div>
+        <div class="ingredients_all">
+            <% @ingredients.each do |i| %>
+            <div class="ingredient">
+                <div class="ingredient_item">Item: <%= i.item %></div>
+                <div class="ingredient_sequence">Sequence: <%= i.sequence %></div>
+            </div>
+            <% end %>
+        </div>
+
+        <div class="section_header">
+            All Avaiable Steps:
+        </div>
+        <div class="steps_all">
+            <% @steps.each do |s| %>
+            <div class="step">
+                <div class="step_description">Description: <%= s.description %></div>
+                <div class="step_sequence">Sequence: <%= s.sequence %></div>
+            </div>
+            <% end %>
+        </div>        
+    </div>
+</div>

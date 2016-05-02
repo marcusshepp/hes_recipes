@@ -46,7 +46,7 @@ body{
 .footer{
     padding: 1em;
 }
-/* NEW.HTML */
+/* RECIPE NEW.HTML */
 .new_recipe_container,
 .forms_container,
 .forms_headers_container,
@@ -96,4 +96,19 @@ body{
 .indiv_dep_header > span{
     position: absolute;
     right: 0%;
+}
+/* RECIPE INDEX.HTML */
+.table_header{
+    display: block;
+}
+.table_header_item{
+    display: inline-block;
+    width: 19%;
+}
+.table_data_each{
+    display: block;
+}
+.table_data_data{
+    display: inline-block;
+    width: 19%;
 }

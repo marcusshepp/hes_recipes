@@ -1,0 +1,31 @@
+<div class="recipe_form_container">
+    <form class="recipe_form" action="http://127.0.0.1:3000/recipes/<%= @recipe.id %>/?update" method="POST">
+        <div class="recipe_form_field">
+            <label for="title" class="recipe_form_label">Title:</label>
+            <input type="text" name="recipe[title]" class="recipe_form_text_input" \
+                max_length="50" value="<%= @recipe.title %>">
+        </div>
+        <div class="recipe_form_field">
+            <label for="prep_time" class="recipe_form_label">Prep Time:</label>
+            <input type="number" step="1" name="recipe[prep_time]" \
+                class="recipe_form_int_input" value="<%= @recipe.prep_time %>">
+        </div>
+        <div class="recipe_form_field">
+            <label for="cook_time" class="recipe_form_label">Cook Time:</label>
+            <input type="number" step="1" name="recipe[cook_time]" \
+                class="recipe_form_int_input" value="<%= @recipe.cook_time %>">
+        </div>
+        <div class="recipe_form_field">
+            <label for="servings" class="recipe_form_label">Servings:</label>
+            <input type="number" step="1" name="recipe[servings]" \
+                class="recipe_form_int_input" value="<%= @recipe.servings %>">
+        </div>
+        <div class="recipe_form_field">
+            <label for="origin" class="recipe_form_label">Origin:</label>
+            <input type="text" name="recipe[origin]" class="recipe_form_text_input" \
+                max_length="100" value="<%= @recipe.origin %>">
+        </div>
+        <input type="hidden" name="recipe[id]" value="<%= @recipe.id %>">
+        <input type="submit" value="Submit" class="recipe_form_submit_btn">
+    </form>
+</div>

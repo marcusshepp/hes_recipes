@@ -16,13 +16,19 @@ class IngredientsController < ApplicationController
   # GET /ingredients/new
   def new
       @ingredient = Ingredient.new
-      @recipes = Recipe.all
+      @r_id = params[:recipe_id]
+      print @r_id
   end
 
   # POST /ingredients
   def create
-      @r = Ingredient.create(params[:ingredient])
-      redirect_to :action => 'index'
+      @recipe = Recipe.find(params[:recipe_id])
+      @recipe.ingredients.create(params[:ingredient])
+      if params[:commit] == "Save and Add 'Steps'"
+          redirect_to url_for(:controller => :steps, :action => :new, :recipe_id => @recipe.id)
+      elsif params[:commit] == "Save and Add Another Ingredient"
+          redirect_to :action => 'new', :recipe_id => @recipe.id
+      end
   end
 
   # GET /ingredients/:id/edit

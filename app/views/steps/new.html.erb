@@ -1,0 +1,20 @@
+<%= form_for @step, :url =>{ :action => "create", :id =>@step.id } do |i| %>
+    <p>
+        <div class="">
+            This is a Step for which Recipe:
+        </div>
+        <select class="" name="recipe_id">
+            <% Recipe.all.each do |r| %>
+                <% if r.id == params[:recipe_id].to_i %>
+                    <option value="<%= r.id %>" selected="selected"><%= r.title %></option>
+                <% else %>
+                    <option value="<%= r.id %>"><%= r.title %></option>
+                <% end %>
+            <% end %>
+        </select>
+    </p>
+    <p>Step Number: <%= i.number_field  'sequence' %></p>
+    <p>Description: <%= i.text_field  'description' %></p>
+    <%= i.submit "Save And Continue" %>
+    <%= i.submit "Save and Add Another Step" %>
+<% end %>
