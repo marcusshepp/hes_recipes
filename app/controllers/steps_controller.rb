@@ -24,7 +24,7 @@ class StepsController < ApplicationController
         if params[:commit] == "Save And Continue"
             redirect_to url_for(:controller => :recipes, :action => :index)
         elsif params[:commit] == "Save and Add Another Step"
-            redirect_to :action => 'new'
+            redirect_to :action => 'new', :recipe_id => @recipe.id
         end
     end
 

@@ -3,6 +3,8 @@
 <head>
 <title>Recipes</title>
 <link rel="stylesheet" type="text/css" href="/stylesheets/application.css" />
+<link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Lato">
 <%= csrf_meta_tags %>
 </head>
 <body>
@@ -10,15 +12,11 @@
         <div class="nav_btn title">
             HES Recipes
         </div>
-        <a href="http://127.0.0.1:3000/recipes">
-            <div class="nav_btn">
-                All Recipes
-            </div>
+        <a class="nav_btn" href="http://127.0.0.1:3000/recipes">
+            All Recipes
         </a>
-        <a href="http://127.0.0.1:3000/recipes/new">
-            <div class="nav_btn">
-                Create New Recipe
-            </div>
+        <a class="nav_btn" href="http://127.0.0.1:3000/recipes/new">
+            Create New Recipe
         </a>
     </div>
     <div class="main">
@@ -57,28 +55,28 @@
         var servings_v = $(".recipe_form_servings_validation");
         // check empty Required fields
         if (title == ""){
-            title_v.html("<span class='validation_error'>Title Is Required</span>");
+            title_v.html("<div class='validation_error'>Title Is Required</div>");
             form_valid = false;
         }
         if (prep == ""){
-            prep_v.html("<span class='validation_error'>Preperation Time Is Required</span>");
+            prep_v.html("<div class='validation_error'>Preperation Time Is Required</div>");
             form_valid = false;
         }
         if (servings == ""){
-            servings_v.html("<span class='validation_error'>Serving Size Is Required</span>");
+            servings_v.html("<div class='validation_error'>Serving Size Is Required</div>");
             form_valid = false;
         }
         // check for neg values
         if (parseFloat(prep) < 0){
-            prep_v.html("<span class='validation_error'>Preperation Time must be greater than zero.</span>");
+            prep_v.html("<div class='validation_error'>Preperation Time must be greater than zero.</div>");
             form_valid = false;
         }
         if (parseFloat(cook) < 0){
-            cook_v.html("<span class='validation_error'>Cook Time must be greater than zero.</span>");
+            cook_v.html("<div class='validation_error'>Cook Time must be greater than zero.</div>");
             form_valid = false;
         }
         if (parseFloat(servings) < 0){
-            servings_v.html("<span class='validation_error'>Serving Size must be greater than zero.</span>");
+            servings_v.html("<div class='validation_error'>Serving Size must be greater than zero.</div>");
             form_valid = false;
         }
         return form_valid;
@@ -90,15 +88,15 @@
         var item = $(".ingredient_item").val();
         var item_v = $(".name_val");
         if (seq == ""){
-            seq_v.html("<span class='validation_error'>Sequence Number is Required.</span>")
+            seq_v.html("<div class='validation_error'>Sequence Order is Required.</div>")
             form_valid = false;
         }
         if (item == ""){
-            item_v.html("<span class='validation_error'>Item Name is Required.</span>")
+            item_v.html("<div class='validation_error'>Name of Ingredient is Required.</div>")
             form_valid = false;
         }
         if (parseFloat(seq) <= 0){
-            seq_v.html("<span class='validation_error'>Sequence Number must be greater than zero.</span>")
+            seq_v.html("<div class='validation_error'>Sequence Number must be greater than zero.</div>")
             form_valid = false;
         }
         return form_valid;
@@ -110,15 +108,51 @@
         var item = $(".description").val();
         var item_v = $(".desc_val");
         if (seq == ""){
-            seq_v.html("<span class='validation_error'>Step Number is Required.</span>")
+            seq_v.html("<div class='validation_error'>Step Number is Required.</div>")
             form_valid = false;
         }
         if (item == ""){
-            item_v.html("<span class='validation_error'>Description is Required.</span>")
+            item_v.html("<div class='validation_error'>Description is Required.</div>")
             form_valid = false;
         }
         if (parseFloat(seq) <= 0){
-            seq_v.html("<span class='validation_error'>Step Number must be greater than zero.</span>")
+            seq_v.html("<div class='validation_error'>Step Number must be greater than zero.</div>")
+            form_valid = false;
+        }
+        return form_valid;
+    }
+    function val_edit(){
+        var form_valid = true;
+        var title = $(".edit_title").val();
+        var title_v = $(".edit_title_val");
+        var prep = $(".edit_prep").val();
+        var prep_v = $(".edit_prep_val");
+        var cook = $(".edit_cook").val();
+        var cook_v = $(".edit_cook_val");
+        var servings = $(".edit_servings").val();
+        var servings_v = $(".edit_servings_val");
+        if (title == ""){
+            title_v.html("<div class='validation_error'>Title is required.</div>")
+            form_valid = false;
+        }
+        if (prep == ""){
+            prep_v.html("<div class='validation_error'>Preperation Time is required.</div>")
+            form_valid = false;
+        }
+        if (parseFloat(prep) <= 0){
+            prep_v.html("<div class='validation_error'>Preperation Time must be greater than zero.</div>")
+            form_valid = false;
+        }
+        if (parseFloat(cook) <= 0){
+            cook_v.html("<div class='validation_error'>Cook Time must be greater than zero.</div>")
+            form_valid = false;
+        }
+        if (servings == ""){
+            servings_v.html("<div class='validation_error'>Number of Servings is required.</div>")
+            form_valid = false;
+        }
+        if (parseFloat(servings) <= 0){
+            seq_v.html("<div class='validation_error'>Number of Servings must be greater than zero.</div>")
             form_valid = false;
         }
         return form_valid;

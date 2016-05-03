@@ -1,5 +1,5 @@
-<p>
-Please choose from the list of recipes below.
+<p class="form_header">
+All Available Recipes
 </p>
 
 <div class="recipe_list_container">
@@ -12,13 +12,18 @@ Please choose from the list of recipes below.
     </div>
     <% @recipes.each do |recipe| %>
         <div class="table_data_each">
-            <div class="table_data_data"><%= link_to recipe.title, recipe %></div>
+            <%= link_to recipe.title, recipe, :class => 'recipe_title table_data_data' %>
             <div class="table_data_data"><%= recipe.servings %></div>
             <div class="table_data_data"><%= recipe.cook_time %></div>
             <div class="table_data_data"><%= recipe.prep_time %></div>
             <div class="table_data_data"><%= recipe.total %></div>
-            <a href="http://127.0.0.1:3000/recipes/<%= recipe.id %>/edit">Edit</a>
-            <button onclick="delete_recipe('<%= recipe.id %>')">Delete</button>
+            <a href="http://127.0.0.1:3000/recipes/<%= recipe.id %>/edit" class="table_btn">
+                Edit
+            </a>
+            <a onclick="delete_recipe('<%= recipe.id %>')" class="reddish table_btn">
+                Delete
+            </a>
+            <hr color="black" size="0.2px" class="linebreak">
         </div>
     <% end %>
 </div>

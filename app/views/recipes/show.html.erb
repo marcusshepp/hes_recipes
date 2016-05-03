@@ -1,9 +1,32 @@
-<div class="recipe_detail_container">
+<div class="forms_forms_container recipe_detail_container">
     <div>Title: <%= @recipe.title %></div>
     <div>Servings: <%= @recipe.servings %></div>
     <div>Cooking Time: <%= @recipe.cook_time %></div>
     <div>Prepping Time: <%= @recipe.prep_time %></div>
     <div>Total Time: <%= @recipe.total %></div>
-    <div>Recipe Ingredients: <%= @recipe.ingredients %></div>
-    <div>Recipe Steps: <%= @recipe.steps %></div>
+    <div>Country of Origin: <%= @recipe.origin %></div>
+    <div class="recipe_show_ingredients">
+        Ingredients: 
+        <% @recipe.ingredients.each do |i| %>
+            <div class="">
+                <% if i.sequence %>
+                    <%= i.sequence %> .) <%= i.item %>
+                <% else %>
+                    <%= i.item %>
+                <% end %>
+            </div>
+        <% end %>
+    </div>
+    <div class="recipe_show_steps">
+        Steps: 
+        <% @recipe.steps.each do |i| %>
+            <div class="">
+                <% if i.sequence %>
+                    <%= i.sequence %> .) <%= i.description %>
+                <% else %>
+                    <%= i.description %>
+                <% end %>
+            </div>
+        <% end %>
+    </div>
 </div>

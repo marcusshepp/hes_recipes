@@ -1,9 +1,12 @@
-<%= form_for @step, :url =>{ :action => "create", :id =>@step.id }, :html => {:onsubmit => "return val_step();"}  do |i| %>
-    <p>
+<div class="form_header">
+    Adding a Step
+</div>
+<%= form_for @step, :url =>{ :action => "create", :id =>@step.id }, :html => {:onsubmit => "return val_step();", :class => "forms_forms_container step_form"}  do |i| %>
+    <div>
         <div class="">
             This is a Step for which Recipe:
         </div>
-        <select class="" name="recipe_id">
+        <select class="step_recipe_id" name="recipe_id">
             <% Recipe.all.each do |r| %>
                 <% if r.id == params[:recipe_id].to_i %>
                     <option value="<%= r.id %>" selected="selected"><%= r.title %></option>
@@ -12,11 +15,11 @@
                 <% end %>
             <% end %>
         </select>
-    </p>
+    </div>
     <div class="step_num_val"></div>
-    <p>Step Number: <%= i.number_field  'sequence', :class => 'step_num' %></p>
+    <div>Step Number: <%= i.number_field  'sequence', :class => 'step_num' %></div>
     <div class="desc_val"></div>
-    <p>Description: <%= i.text_field  'description', :class => 'description' %></p>
+    <div>Description: <%= i.text_field  'description', :class => 'description' %></div>
     <%= i.submit "Save And Continue" %>
     <%= i.submit "Save and Add Another Step" %>
 <% end %>
