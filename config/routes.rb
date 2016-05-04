@@ -4,7 +4,7 @@ Recipes::Application.routes.draw do
   resources :steps
 
   root :to => 'recipes#index'
-  
+  get '/recipes/:recipe_id/delete' => 'recipes#destroy'
   
 
 

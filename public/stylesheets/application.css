@@ -9,7 +9,6 @@
     --pinkish: #FFBDD3;
 }
 body{
-    width: 80%;
     margin: 0 auto;
     background-image: url("../images/food.png");
     font-family: 'Lato', serif;
@@ -18,10 +17,20 @@ body{
 /* COMMON */
 .hide{ display: none; }
 .display { display: block;}
+.footer_container{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
 .footer{
     position: absolute;
     bottom: 0;
     left: 0;
+    height: 60px;
+}
+.push{
+    position: absolute;
+    height: 400px;
 }
 .reddish{
     background-color: var(--reddish) !important;
@@ -32,9 +41,17 @@ body{
     border-radius: 3px;
     width: auto;
 }
+.content{
+    padding-bottom: 60px;
+    width: 80%;
+    margin: 0 auto;
+}
+.main{
+    position: relative;
+}
 /* NAV */
 .nav_container{
-    position: absolute;
+    position: relative;
     box-shadow: var(--box-shadow);
     width: 100%;
     left: 0;
@@ -78,7 +95,7 @@ body{
     display: block;
 }
 .forms_forms_container{
-    width: 100%;
+    width: 70%;
     background-color: var(--yellowish);
     padding: 1em;
     border-radius: 10px;
@@ -92,8 +109,8 @@ body{
     font-size: 125%;
 }
 .recipe_form{
-    width: 70%;
-    margin-left: 3%;
+    width: 50%;
+    padding-left: 10%;
 }
 .steps_ingredients_all_btn{
     margin: 1em;
@@ -107,7 +124,7 @@ body{
     display: inline-block;
 }
 .recipe_form_label{
-    width: 50%;
+    width: 40%;
 }
 .recipe_form_text_input,
 .recipe_form_int_input{
@@ -128,11 +145,20 @@ body{
     position: absolute;
     right: 0%;
 }
+.recipe_form_ingredients_container{
+    display: block;
+    margin-top: 50px;
+}
+.indiv_ing{
+    display: block;
+    margin-top: 25px;
+}
 /* RECIPE INDEX.HTML */
 .recipe_list_container{
     background-color: var(--yellowish);
     padding: 1em;
     border-radius: 10px;
+    width: 105%;
 }
 .table_header{
     display: block;
@@ -153,7 +179,25 @@ body{
 .table_data_data{
     display: inline-block;
 }
+.table_btn_container{
+    display: inline-block;
+    width: 15%;
+}
 .table_btn{
+    text-decoration: none;
+    color: white;
+    background-color: grey;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    padding: 0.5em;
+    text-align: center;
+    display: inline-block;
+    border-radius: 4px;
+    width: 20%;
+}
+.table_btn_delete{
+    display: inline-block;
     text-decoration: none;
     color: white;
     background-color: grey;
@@ -162,6 +206,7 @@ body{
     padding: 0.5em;
     text-align: center;
     border-radius: 4px;
+    height: 120%;
 }
 .recipe_title{
     text-decoration: none;

@@ -7,14 +7,12 @@ class RecipesController < ApplicationController
     # GET /recipes/:id
     def show
         @recipe = Recipe.find_all_by_id(params["id"])[0]
-        if (params.has_key?(:delete))
-            @recipe.destroy
-        end
     end
 
     # GET /recipes/new
     def new
         # render recipe creation form
+        @recipe = Recipe.new
         @ingredients = Ingredient.all
         @steps = Step.all
     end
@@ -23,7 +21,7 @@ class RecipesController < ApplicationController
     :verify_authenticity_token
     def create
         @r = Recipe.create(params[:recipe])
-        redirect_to url_for(:controller => :ingredients, :action => :new, :recipe_id => @r.id)
+        redirect_to :action => "show", :id => @r.id
     end
 
     # GET /recipes/:id/edit
@@ -41,6 +39,8 @@ class RecipesController < ApplicationController
 
     # DELETE /recipes/:id
     def destroy
+        print params
         Recipe.find(params[:id]).destroy
+        redirect_to :action => "index"
     end
 end

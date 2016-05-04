@@ -17,12 +17,10 @@ All Available Recipes
             <div class="table_data_data"><%= recipe.cook_time %></div>
             <div class="table_data_data"><%= recipe.prep_time %></div>
             <div class="table_data_data"><%= recipe.total %></div>
-            <a href="http://127.0.0.1:3000/recipes/<%= recipe.id %>/edit" class="table_btn">
-                Edit
-            </a>
-            <a onclick="delete_recipe('<%= recipe.id %>')" class="reddish table_btn">
-                Delete
-            </a>
+            <div class="table_btn_container">
+                <%= link_to 'Edit', edit_recipe_path(recipe), :class => "table_btn" %>
+                <%= button_to 'delete', recipe, method: :delete, :class => "reddish table_btn_delete" %>
+            </div>
             <hr color="black" size="0.2px" class="linebreak">
         </div>
     <% end %>
