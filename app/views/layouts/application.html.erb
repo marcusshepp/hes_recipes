@@ -5,7 +5,6 @@
 <link rel="stylesheet" type="text/css" href="/stylesheets/application.css" />
 <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Lato">
-<%= javascript_include_tag :defaults %>
 <%= csrf_meta_tags %>
 </head>
 <body>
@@ -58,22 +57,18 @@
             form_valid = false;
         }
         // check for neg values
-        if (parseFloat(prep) < 0){
+        if (parseFloat(prep) <= 0){
             prep_v.html("<div class='validation_error'>Preperation Time must be greater than zero.</div>");
             form_valid = false;
         }
-        if (parseFloat(cook) < 0){
+        if (parseFloat(cook) <= 0){
             cook_v.html("<div class='validation_error'>Cook Time must be greater than zero.</div>");
             form_valid = false;
         }
-        if (parseFloat(servings) < 0){
+        if (parseFloat(servings) <= 0){
             servings_v.html("<div class='validation_error'>Serving Size must be greater than zero.</div>");
             form_valid = false;
         }
-        return form_valid;
-    }
-    function val_ing(){
-        var form_valid = true;
         var seq = $(".ingredient_seq").val();
         var seq_v = $(".sequence_val");
         var item = $(".ingredient_item").val();
@@ -90,10 +85,6 @@
             seq_v.html("<div class='validation_error'>Sequence Number must be greater than zero.</div>")
             form_valid = false;
         }
-        return form_valid;
-    }
-    function val_step(){
-        var form_valid = true;
         var seq = $(".step_num").val();
         var seq_v = $(".step_num_val");
         var item = $(".description").val();
@@ -112,41 +103,51 @@
         }
         return form_valid;
     }
-    function val_edit(){
-        var form_valid = true;
-        var title = $(".edit_title").val();
-        var title_v = $(".edit_title_val");
-        var prep = $(".edit_prep").val();
-        var prep_v = $(".edit_prep_val");
-        var cook = $(".edit_cook").val();
-        var cook_v = $(".edit_cook_val");
-        var servings = $(".edit_servings").val();
-        var servings_v = $(".edit_servings_val");
-        if (title == ""){
-            title_v.html("<div class='validation_error'>Title is required.</div>")
-            form_valid = false;
-        }
-        if (prep == ""){
-            prep_v.html("<div class='validation_error'>Preperation Time is required.</div>")
-            form_valid = false;
-        }
-        if (parseFloat(prep) <= 0){
-            prep_v.html("<div class='validation_error'>Preperation Time must be greater than zero.</div>")
-            form_valid = false;
-        }
-        if (parseFloat(cook) <= 0){
-            cook_v.html("<div class='validation_error'>Cook Time must be greater than zero.</div>")
-            form_valid = false;
-        }
-        if (servings == ""){
-            servings_v.html("<div class='validation_error'>Number of Servings is required.</div>")
-            form_valid = false;
-        }
-        if (parseFloat(servings) <= 0){
-            seq_v.html("<div class='validation_error'>Number of Servings must be greater than zero.</div>")
-            form_valid = false;
-        }
-        return form_valid;
+    var number_of_ingredients = 0;
+    var number_of_steps = 0;
+    function add_step(){
+        number_of_steps += 1;
+        var markup = '';
+        markup += '\
+        <div class="indiv_step step'+number_of_steps+'">\
+        <div class="ing_step_btn" onclick="remove_step(\''+number_of_steps+'\')">X</div>\
+        <div class="recipe_form_field">\
+        <label class="recipe_form_label" for="recipe_steps_attributes_'+number_of_steps+'_description">Description</label>\
+        <input class="recipe_form_text_input" id="recipe_steps_attributes_'+number_of_steps+'_description" name="recipe[steps_attributes]['+number_of_steps+'][description]" size="30" type="text" />\
+        </div>\
+        <div class="recipe_form_field">\
+        <label class="recipe_form_label" for="recipe_steps_attributes_'+number_of_steps+'_sequence">Sequence</label>\
+        <input class="recipe_form_int_input" id="recipe_steps_attributes_'+number_of_steps+'_sequence" name="recipe[steps_attributes]['+number_of_steps+'][sequence]" type="number" />\
+        </div>\
+        </div>\
+        <div class="new_step_container'+(number_of_steps+1)+'"></div>';
+        $(".new_step_container"+number_of_steps).html(markup);
+    }
+    function add_ingredient(){
+        number_of_ingredients += 1;
+        var markup = '';
+        markup += '\
+        <div class="indiv_ing ing'+number_of_ingredients+'">\
+        <div class="ing_remove_btn" onclick="remove_ingredient(\''+number_of_ingredients+'\')">X</div>\
+        <div class="recipe_form_field">\
+        <label class="recipe_form_label" for="recipe_ingredients_attributes_'+number_of_ingredients+'_item">Item</label>\
+        <input class="recipe_form_text_input" id="recipe_ingredients_attributes_'+number_of_ingredients+'_item" name="recipe[ingredients_attributes]['+number_of_ingredients+'][item]" size="30" type="text" />\
+        </div>\
+        <div class="recipe_form_field">\
+        <label class="recipe_form_label" for="recipe_ingredients_attributes_'+number_of_ingredients+'_sequence">Sequence</label>\
+        <input class="recipe_form_int_input" id="recipe_ingredients_attributes_'+number_of_ingredients+'_sequence" name="recipe[ingredients_attributes]['+number_of_ingredients+'][sequence]" type="number" />\
+        </div>\
+        </div>\
+        <div class="new_ing_container'+(number_of_ingredients+1)+'"></div>';
+        $(".new_ing_container"+number_of_ingredients).html(markup);
+    }
+    function remove_ingredient(i){
+        number_of_ingredients -= 1;
+        $(".ing"+i).html("");
+    }
+    function remove_step(i){
+        number_of_steps -= 1;
+        $(".step"+i).html("");
     }
 </script>
 </body>

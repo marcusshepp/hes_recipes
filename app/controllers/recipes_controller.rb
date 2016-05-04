@@ -21,7 +21,7 @@ class RecipesController < ApplicationController
     :verify_authenticity_token
     def create
         @r = Recipe.create(params[:recipe])
-        redirect_to :action => "show", :id => @r.id
+        redirect_to url_for :action => "show", :id => @r.id
     end
 
     # GET /recipes/:id/edit
@@ -33,7 +33,7 @@ class RecipesController < ApplicationController
     def update
         @r = Recipe.find(params[:id])
         if @r.update_attributes(params[:recipe])
-            redirect_to :action => "index"
+            redirect_to :action => "show", :id => @r.id
         end
     end
 
