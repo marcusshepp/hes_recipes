@@ -1,1 +1,4 @@
-foo bar pop this is a readme file
+A RoR App Building Challenge By: Health Enhancement Systems
+
+Allows User to create Recipe objects that have a dynamic number
+of Ingredients and Steps. 
