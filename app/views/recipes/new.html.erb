@@ -29,7 +29,7 @@
                 <div class="recipe_form_field">
                     <%= f.label :servings, :class=>"recipe_form_label"  %>
                     <div class="recipe_form_servings_validation"></div>
-                    <%= f.text_field :servings, :class=>"recipe_form_int_input recipe_form_servings" %>
+                    <%= f.number_field :servings, :class=>"recipe_form_int_input recipe_form_servings" %>
                 </div>
                 <div class="recipe_form_field">
                     <%= f.label :country_of_origin, :class=>"recipe_form_label"  %>
@@ -291,6 +291,7 @@
                 <div class="form_header2">
                     Ingredients
                 </div>
+                <div class="ing_gen_val"></div>
                 <%= f.fields_for :ingredients do |ff| %>
                     <div class="indiv_ing">
                         <div class="recipe_form_field">
@@ -327,6 +328,7 @@
                 <div class="form_header2">
                     Steps
                 </div>
+                <div class="steps_gen_val"></div>
                 <%= f.fields_for :steps do |ff| %>
                     <div class="indiv_ing">
                         <div class="recipe_form_field">

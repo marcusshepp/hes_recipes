@@ -113,11 +113,13 @@
         <div class="ing_step_btn" onclick="remove_step(\''+number_of_steps+'\')">Remove Step</div>\
         <div class="recipe_form_field">\
         <label class="recipe_form_label" for="recipe_steps_attributes_'+number_of_steps+'_description">Description</label>\
-        <input class="recipe_form_text_input" id="recipe_steps_attributes_'+number_of_steps+'_description" name="recipe[steps_attributes]['+number_of_steps+'][description]" size="30" type="text" />\
+        <div class="desc_val"></div>\
+        <input class="recipe_form_text_input description" id="recipe_steps_attributes_'+number_of_steps+'_description" name="recipe[steps_attributes]['+number_of_steps+'][description]" size="30" type="text" />\
         </div>\
         <div class="recipe_form_field">\
         <label class="recipe_form_label" for="recipe_steps_attributes_'+number_of_steps+'_sequence">Step Number</label>\
-        <input class="recipe_form_int_input" id="recipe_steps_attributes_'+number_of_steps+'_sequence" name="recipe[steps_attributes]['+number_of_steps+'][sequence]" type="number" />\
+        <div class="step_num_val"></div>\
+        <input class="recipe_form_int_input step_num" id="recipe_steps_attributes_'+number_of_steps+'_sequence" name="recipe[steps_attributes]['+number_of_steps+'][sequence]" type="number" onblur="check_int_field(this)"/>\
         </div>\
         <hr color="black" size="0.2px" class="linebreak2">\
         </div>\
@@ -132,7 +134,8 @@
         <div class="ing_remove_btn" onclick="remove_ingredient(\''+number_of_ingredients+'\')">Remove Ingredient</div>\
         <div class="recipe_form_field">\
         <label class="recipe_form_label" for="recipe_ingredients_attributes_'+number_of_ingredients+'_item">Name</label>\
-        <input class="recipe_form_text_input" id="recipe_ingredients_attributes_'+number_of_ingredients+'_item" name="recipe[ingredients_attributes]['+number_of_ingredients+'][item]" size="30" type="text" />\
+        <div class="name_val"></div>\
+        <input class="recipe_form_text_input ingredient_item" id="recipe_ingredients_attributes_'+number_of_ingredients+'_item" name="recipe[ingredients_attributes]['+number_of_ingredients+'][item]" size="30" type="text" />\
         <div class="size_options_containter">\
             <div class="size_option">1/2</div>\
             <div class="size_option">1/4</div>\
@@ -141,7 +144,8 @@
         </div>\
         <div class="recipe_form_field">\
         <label class="recipe_form_label" for="recipe_ingredients_attributes_'+number_of_ingredients+'_sequence">Order Added to Recipe</label>\
-        <input class="recipe_form_int_input" id="recipe_ingredients_attributes_'+number_of_ingredients+'_sequence" name="recipe[ingredients_attributes]['+number_of_ingredients+'][sequence]" type="number" />\
+        <div class="sequence_val"></div>\
+        <input class="recipe_form_int_input ingredient_seq" id="recipe_ingredients_attributes_'+number_of_ingredients+'_sequence" name="recipe[ingredients_attributes]['+number_of_ingredients+'][sequence]" type="number" onblur="check_int_field(this)" />\
         </div>\
         <hr color="black" size="0.2px" class="linebreak2">\
         </div>\
@@ -162,6 +166,18 @@
         console.log(text_input);
         text_input.value = $.trim(size_text);
     });
+    function check_int_field(elem){
+        if(parseFloat(elem.value) <= 0){
+            if(has_class(elem, "step_num")){
+                $(".steps_gen_val").html("<div class='validation_error'>Step Number must be greater than zero.</div>");
+            } else {
+                $(".ing_gen_val").html("<div class='validation_error'>Order Number must be greater than zero.</div>");
+            }
+        }
+    }
+    function has_class(element, cls) {
+        return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+    }   
 </script>
 </body>
 </html>
