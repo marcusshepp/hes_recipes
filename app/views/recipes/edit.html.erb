@@ -2,14 +2,14 @@
     <div class="forms_container">
         <div class="forms_headers_container">
             <div class="form_header">
-                Updating Information For: <%= @recipe.title %>
+                Creating New Recipe
             </div>
         </div>
         <div class="forms_forms_container">
         <%= form_for setup_recipe(@recipe), :html => { :class => "recipe_form", :onsubmit => "return recipe_form_validation()" } do |f| %>
             <div class="recipe_form_1">
-                <div class="form_header">
-                    Recipe
+                <div class="form_header2">
+                    Recipe Basic Info
                 </div>
                 <div class="recipe_form_field">
                     <%= f.label :title, :class=>"recipe_form_label" %>
@@ -288,10 +288,10 @@
                 </div>
             </div>
         <div class="recipe_form_2">
-            <div class="recipe_form_ingredients_container">
-                <div class="form_header">
+                <div class="form_header2">
                     Ingredients
                 </div>
+                <div class="ing_gen_val"></div>
                 <%= f.fields_for :ingredients do |ff| %>
                     <div class="indiv_ing">
                         <div class="recipe_form_field">
@@ -310,7 +310,6 @@
                                 </div>
                             </div>
                         </div>
-                        </div>
                         <div class="recipe_form_field">
                             <%= ff.label :sequence, "Order Added to Recipe", :class=>"recipe_form_label"  %>
                             <div class="sequence_val"></div>
@@ -323,13 +322,13 @@
                 <div class="add_ingredient_btn" onclick="add_ingredient()">
                     Add Another Ingredient
                 </div>
-            </div>
         </div>
         <div class="recipe_form_3">
             <div class="recipe_form_steps_container">
-                <div class="form_header">
+                <div class="form_header2">
                     Steps
                 </div>
+                <div class="steps_gen_val"></div>
                 <%= f.fields_for :steps do |ff| %>
                     <div class="indiv_ing">
                         <div class="recipe_form_field">
