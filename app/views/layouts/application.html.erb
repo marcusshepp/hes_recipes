@@ -110,15 +110,16 @@
         var markup = '';
         markup += '\
         <div class="indiv_step step'+number_of_steps+'">\
-        <div class="ing_step_btn" onclick="remove_step(\''+number_of_steps+'\')">X</div>\
+        <div class="ing_step_btn" onclick="remove_step(\''+number_of_steps+'\')">Remove Step</div>\
         <div class="recipe_form_field">\
         <label class="recipe_form_label" for="recipe_steps_attributes_'+number_of_steps+'_description">Description</label>\
         <input class="recipe_form_text_input" id="recipe_steps_attributes_'+number_of_steps+'_description" name="recipe[steps_attributes]['+number_of_steps+'][description]" size="30" type="text" />\
         </div>\
         <div class="recipe_form_field">\
-        <label class="recipe_form_label" for="recipe_steps_attributes_'+number_of_steps+'_sequence">Sequence</label>\
+        <label class="recipe_form_label" for="recipe_steps_attributes_'+number_of_steps+'_sequence">Step Number</label>\
         <input class="recipe_form_int_input" id="recipe_steps_attributes_'+number_of_steps+'_sequence" name="recipe[steps_attributes]['+number_of_steps+'][sequence]" type="number" />\
         </div>\
+        <hr color="black" size="0.2px" class="linebreak2">\
         </div>\
         <div class="new_step_container'+(number_of_steps+1)+'"></div>';
         $(".new_step_container"+number_of_steps).html(markup);
@@ -128,15 +129,21 @@
         var markup = '';
         markup += '\
         <div class="indiv_ing ing'+number_of_ingredients+'">\
-        <div class="ing_remove_btn" onclick="remove_ingredient(\''+number_of_ingredients+'\')">X</div>\
+        <div class="ing_remove_btn" onclick="remove_ingredient(\''+number_of_ingredients+'\')">Remove Ingredient</div>\
         <div class="recipe_form_field">\
-        <label class="recipe_form_label" for="recipe_ingredients_attributes_'+number_of_ingredients+'_item">Item</label>\
+        <label class="recipe_form_label" for="recipe_ingredients_attributes_'+number_of_ingredients+'_item">Name</label>\
         <input class="recipe_form_text_input" id="recipe_ingredients_attributes_'+number_of_ingredients+'_item" name="recipe[ingredients_attributes]['+number_of_ingredients+'][item]" size="30" type="text" />\
+        <div class="size_options_containter">\
+            <div class="size_option">1/2</div>\
+            <div class="size_option">1/4</div>\
+            <div class="size_option">1/8</div>\
+        </div>\
         </div>\
         <div class="recipe_form_field">\
-        <label class="recipe_form_label" for="recipe_ingredients_attributes_'+number_of_ingredients+'_sequence">Sequence</label>\
+        <label class="recipe_form_label" for="recipe_ingredients_attributes_'+number_of_ingredients+'_sequence">Order Added to Recipe</label>\
         <input class="recipe_form_int_input" id="recipe_ingredients_attributes_'+number_of_ingredients+'_sequence" name="recipe[ingredients_attributes]['+number_of_ingredients+'][sequence]" type="number" />\
         </div>\
+        <hr color="black" size="0.2px" class="linebreak2">\
         </div>\
         <div class="new_ing_container'+(number_of_ingredients+1)+'"></div>';
         $(".new_ing_container"+number_of_ingredients).html(markup);
@@ -149,6 +156,12 @@
         number_of_steps -= 1;
         $(".step"+i).html("");
     }
+    $(document).on("mousedown", ".size_option", function(){
+        var size_text = $(this).html();
+        var text_input = $(this).parent().parent().find(":input")[0];
+        console.log(text_input);
+        text_input.value = $.trim(size_text);
+    });
 </script>
 </body>
 </html>

@@ -4,11 +4,11 @@ All Available Recipes
 
 <div class="recipe_list_container">
     <div class="table_header">
-        <div class="table_header_item">Title</div>
-        <div class="table_header_item">Servings</div>
-        <div class="table_header_item">Cook Time</div>
-        <div class="table_header_item">Prep Time</div>
-        <div class="table_header_item">Total Time</div>
+        <div class="table_header_item form_header">Title</div>
+        <div class="table_header_item form_header">Servings</div>
+        <div class="table_header_item form_header">Cook Time</div>
+        <div class="table_header_item form_header">Prep Time</div>
+        <div class="table_header_item form_header">Total Time</div>
     </div>
     <% @recipes.each do |recipe| %>
         <div class="table_data_each">
@@ -18,10 +18,10 @@ All Available Recipes
             <div class="table_data_data"><%= recipe.prep_time %></div>
             <div class="table_data_data"><%= recipe.total %></div>
             <div class="table_btn_container">
-                <%= link_to 'Edit', edit_recipe_path(recipe), :class => "table_btn" %>
+                <%= button_to 'Edit', { :action => "edit", :id => recipe.id }, :method => "get", :class => "table_btn" %>
                 <%= button_to 'delete', recipe, method: :delete, :class => "reddish table_btn_delete" %>
             </div>
-            <hr color="black" size="0.2px" class="linebreak">
+            <hr color="black" size="0.2px" class="linebreak2">
         </div>
     <% end %>
 </div>

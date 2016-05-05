@@ -3,17 +3,17 @@
 </div>
 <div class="forms_forms_container recipe_detail_container">
     <div class="recipe_show_recipe">
-        <div>Title: <%= @recipe.title %></div>
-        <div>Servings: <%= @recipe.servings %></div>
-        <div>Cooking Time: <%= @recipe.cook_time %></div>
-        <div>Prepping Time: <%= @recipe.prep_time %></div>
-        <div>Total Time: <%= @recipe.total %></div>
-        <div>Country of Origin: <%= @recipe.origin %></div>
+        <div class="recipe_show_data">Title: <%= @recipe.title %></div>
+        <div class="recipe_show_data">Serving Size: <%= @recipe.servings %></div>
+        <div class="recipe_show_data">Cooking Time: <%= @recipe.cook_time %> minute(s)</div>
+        <div class="recipe_show_data">Prepping Time: <%= @recipe.prep_time %> minute(s)</div>
+        <div class="recipe_show_data">Total Time: <%= @recipe.total %> minute(s)</div>
+        <div class="recipe_show_data">Country of Origin: <%= @recipe.origin %></div>
     </div>
     <div class="recipe_show_ingredients">
-        Ingredients: 
+        <div class="form_header">Ingredients:</div>
         <% @recipe.ingredients.each do |i| %>
-            <div class="">
+            <div class="recipe_show_data">
                 <% if i.sequence %>
                     <%= i.sequence %> .) <%= i.item %>
                 <% else %>
@@ -23,9 +23,9 @@
         <% end %>
     </div>
     <div class="recipe_show_steps">
-        Steps: 
+        <div class="form_header">Steps:</div>
         <% @recipe.steps.each do |i| %>
-            <div class="">
+            <div class="recipe_show_data">
                 <% if i.sequence %>
                     <%= i.sequence %> .) <%= i.description %>
                 <% else %>
@@ -36,6 +36,6 @@
     </div>
 </div>
 <div class="">
-    <%= link_to 'Edit', edit_recipe_path(@recipe), :class => "show_btn" %>
-    <%= button_to 'Delete', @recipe, :method => "delete", :class => "reddish show_btn" %>
+    <%= button_to 'Edit', { :action => "edit" }, :method => "get", :class => "show_btn" %>
+    <%= button_to 'delete', @recipe, method: :delete, :class => "reddish show_btn" %>
 </div>

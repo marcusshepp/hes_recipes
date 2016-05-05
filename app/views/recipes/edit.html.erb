@@ -17,12 +17,12 @@
                     <%= f.text_field :title, :class=>"recipe_form_text_input recipe_form_title" %>
                 </div>
                 <div class="recipe_form_field">
-                    <%= f.label :prep_time, :class=>"recipe_form_label"  %>
+                    <%= f.label :prep_time, "Preperation Time (In Minutes)",:class=>"recipe_form_label"  %>
                     <div class="recipe_form_prep_validation"></div>
                     <%= f.number_field :prep_time, :class=>"recipe_form_int_input recipe_form_prep" %>
                 </div>
                 <div class="recipe_form_field">
-                    <%= f.label :cook_time, :class=>"recipe_form_label"  %>
+                    <%= f.label :cook_time, "Cook Time (In Minutes)", :class=>"recipe_form_label"  %>
                     <div class="recipe_form_cook_validation"></div>
                     <%= f.number_field :cook_time, :class=>"recipe_form_int_input recipe_form_cook" %>
                 </div>
@@ -295,20 +295,21 @@
                 <%= f.fields_for :ingredients do |ff| %>
                     <div class="indiv_ing">
                         <div class="recipe_form_field">
-                            <%= ff.label :item, :class=>"recipe_form_label"  %>
+                            <%= ff.label :item, "Name", :class=>"recipe_form_label"  %>
                             <div class="name_val"></div>
                             <%= ff.text_field :item, :class=>"recipe_form_text_input ingredient_item" %>
                         </div>
                         <div class="recipe_form_field">
-                            <%= ff.label :sequence, :class=>"recipe_form_label"  %>
+                            <%= ff.label :sequence, "Order Added to Recipe", :class=>"recipe_form_label"  %>
                             <div class="sequence_val"></div>
                             <%= ff.number_field :sequence, :class=>"recipe_form_int_input ingredient_seq" %>
                         </div>
                     </div>
+                    <hr color="black" size="0.2px" class="linebreak2">
                 <% end %>
                 <div class="new_ing_container1"></div>
                 <div class="add_ingredient_btn" onclick="add_ingredient()">
-                    Add Ingredient
+                    Add Another Ingredient
                 </div>
             </div>
         </div>
@@ -325,15 +326,16 @@
                             <%= ff.text_field :description, :class=>"recipe_form_text_input description" %>
                         </div>
                         <div class="recipe_form_field">
-                            <%= ff.label :sequence, :class=>"recipe_form_label"  %>
+                            <%= ff.label :sequence, "Step Number", :class=>"recipe_form_label"  %>
                             <div class="step_num_val"></div>
                             <%= ff.number_field :sequence, :class=>"recipe_form_int_input step_num" %>
                         </div>    
                     </div>
+                    <hr color="black" size="0.2px" class="linebreak2">
                 <% end %>
                 <div class="new_step_container1"></div>
                 <div class="add_step_btn" onclick="add_step()">
-                    Add Step
+                    Add Another Step
                 </div>
             </div>
         </div>
