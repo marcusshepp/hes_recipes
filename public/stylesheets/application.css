@@ -55,6 +55,7 @@ body{
     background-color: #F0EBED;
 }
 .nav_btn:hover{
+    animation: nav_hover_fade 0.3s;
     background-color: grey;
 }
 .nav_btn:hover{
@@ -174,6 +175,11 @@ body{
     height: 50px;
     font-size: 100%;
     float: right;
+    cursor: pointer;
+}
+.recipe_submit_btn:hover{
+    animation: submit_hover_fade 1s;
+    background-color: #AAF9C6;
 }
 .form_header2{
     font-size: 140%;
@@ -197,7 +203,7 @@ body{
     background-color: var(--yellowish);
     padding: 1em;
     border-radius: 10px;
-    width: 105%;
+    width: 90%;
 }
 .table_header{
     display: block;
@@ -332,4 +338,23 @@ body{
     width: auto !important;
     display: block;
     margin: 1em;
+}
+
+/* animations */
+@keyframes nav_hover_fade {
+    0% {
+        background-color: #F0EBED;
+    }
+
+    100% {
+        background-color: grey;
+    }
+}
+@keyframes submit_hover_fade{
+    0%{
+        background-color: #53E889;
+    }
+    100%{
+        background-color: #AAF9C6;
+    }
 }
